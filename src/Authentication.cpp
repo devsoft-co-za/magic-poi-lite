@@ -70,7 +70,6 @@ void Authentication::saveJWTTokenToFile(const char *token)
 
 bool Authentication::authenticate()
 {
-    // Simulate authentication process
     Serial.println("Authenticating...");
 
     HTTPClient http;

@@ -48,27 +48,37 @@ void setup()
 
   // Connecting to WiFi and authenticating
   bool isAuthenticated = authentication.checkSavedToken();
-
-  //Check disk for saved auth:
+  // isAuthenticated = false; //test re-auth 
+  //Check disk for saved JWT auth and use it:
   if (isAuthenticated)
   {
-    Serial.println("Authentication found. Use saved.");
+    Serial.println("Authentication found. Using saved.");
     // Loading data
-    loading.load();
+    if(loading.load()){
+          Serial.println("LOADED AND SAVED TIMELINE SUCCESSFULLY");
+        } else{
+          Serial.println("LOADING AND SAVING TIMELINE UNSUCCESSFUL");
+        } //todo: loading needs to tell us if authentication is unsuccessful, so we can try password auth?
   }
-  else //no saved found: 
+  else //no saved JWT found: 
   {
     bool isAuthenticating = authentication.authenticate();
     if(isAuthenticating){ //auth success
-      if(isAuthenticated){ //check disk again
-        Serial.println("Authenticated on with Server. Should be saved now");
+      isAuthenticated = authentication.checkSavedToken(); //check again for testing, just for testing?
+      if(isAuthenticated){ 
+        Serial.println("Authenticated using login success. Should be saved now, using..");
+        if(loading.load()){
+          Serial.println("LOADED AND SAVED TIMELINE SUCCESSFULLY");
+        } else{
+          Serial.println("LOADING AND SAVING TIMELINE UNSUCCESSFUL");
+        }
       } else
       {
-        Serial.println("too soon?. Should be saved here, maybe delay first");
+        Serial.println("Auth check saved JWT after password login failed");
       }
     } else
     {
-      Serial.println("Failed to authenticate.");
+      Serial.println("Failed to authenticate with password");
     }
   }
 }
@@ -78,5 +88,5 @@ void loop()
   // Playing
   playing.play();
   // Add delay if needed
-  delay(1000); // Example: Delay for 1 second between each play
+  delay(5000); // Example: Delay for 1 second between each play
 }
