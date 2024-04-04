@@ -12,6 +12,9 @@
 - edit secrets.h, adding your WiFi details and MadicPoi login
 - upload to D1 mini and watch your LED's change colour
 
+### Documentation: 
+- https://devsoft-co-za.github.io/magic-poi-lite/
+
 ### Notes: 
 - on the Magic Poi Lite page you can click on Sequence Mode to create a timeline with fixed interval (1 second between changes) 
 - the strobing colours are not implemented yet
