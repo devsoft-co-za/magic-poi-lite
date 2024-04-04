@@ -5,4 +5,6 @@
 .vscode/ipch
 .vscode/*
 secrets.h
+doxygen
+
 

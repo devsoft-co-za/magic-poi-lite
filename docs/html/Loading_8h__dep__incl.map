@@ -1,0 +1,9 @@
+<map id="src/Loading.h" name="src/Loading.h">
+<area shape="rect" id="Node000001" title="Declaration of the Loading class." alt="" coords="150,5,258,33"/>
+<area shape="rect" id="Node000002" href="$Loading_8cpp.html" title="Implementation of the Loading class." alt="" coords="5,81,128,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,43,92,83,90,78,165,38"/>
+<area shape="rect" id="Node000003" href="$Main_8cpp.html" title="Main program file." alt="" coords="152,81,256,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,49,207,81,201,81,201,49"/>
+<area shape="rect" id="Node000004" href="$Playing_8cpp.html" title="Implementation of the Playing class." alt="" coords="280,81,400,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,38,317,78,314,83,240,43"/>
+</map>

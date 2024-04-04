@@ -1,3 +1,12 @@
+/**
+ * @file Authentication.cpp
+ * @brief Implementation of the Authentication class.
+ * 
+ * This class includes methods for authentication using JWT to the Magic Poi Lite server api. 
+ * It also has methods to save and load the JWT token from LittleFS. 
+ */
+
+
 #include "Authentication.h"
 #include <Arduino.h>
 #include <LittleFS.h>
@@ -6,13 +15,27 @@
 #include <ESP8266HTTPClient.h>
 #include <ArduinoJson.h>
 
-// Constructor definition
+/**
+ * @brief Default constructor for Authentication class.
+ * 
+ * This constructor initializes the Authentication object by clearing the jwtToken buffer.
+ */
 Authentication::Authentication()
 {
     // Initialize variables
     memset(jwtToken, 0, sizeof(jwtToken)); // Clear jwtToken buffer
 }
 
+
+/**
+ * @brief Reads JWT token from a file stored on LittleFS.
+ * 
+ * This method attempts to read a JWT token from a file stored on LittleFS (Little File System).
+ * If the file exists, it reads the token from the file and returns it. If the file does not exist
+ * or if there's any failure during the file system operation, an empty string is returned.
+ * 
+ * @return A string containing the JWT token read from the file, or an empty string if the token couldn't be read.
+ */
 String Authentication::readJWTTokenFromFile()
 {
     String jwtToken = "";
@@ -46,6 +69,17 @@ String Authentication::readJWTTokenFromFile()
     return jwtToken;
 }
 
+
+/**
+ * @brief Saves a JWT token to a file on LittleFS.
+ * 
+ * This method attempts to save a JWT token to a file stored on LittleFS (Little File System).
+ * If LittleFS initialization succeeds and the file is successfully created and written, 
+ * a success message is printed to the Serial monitor. If there's any failure during 
+ * the file system operation, an error message is printed.
+ * 
+ * @param token The JWT token to be saved to the file.
+ */
 void Authentication::saveJWTTokenToFile(const char *token)
 {
     if (LittleFS.begin())
@@ -68,6 +102,18 @@ void Authentication::saveJWTTokenToFile(const char *token)
     }
 }
 
+
+/**
+ * @brief Authenticates the client with the server.
+ * 
+ * This method attempts to authenticate the client with the server by sending a POST request
+ * to the login endpoint with the provided email and password. If the authentication is successful,
+ * the JWT token received from the server is parsed and saved, and the method returns true.
+ * If any error occurs during the HTTP request or JSON parsing, or if the server returns an error
+ * response code, the method returns false.
+ * 
+ * @return true if the authentication is successful, false otherwise.
+ */
 bool Authentication::authenticate()
 {
     Serial.println("Authenticating...");
@@ -118,6 +164,16 @@ bool Authentication::authenticate()
     // return isAuthenticated;
 }
 
+
+/**
+ * @brief Checks for a saved JWT token and loads it if available.
+ * 
+ * This method checks if a JWT token is saved in a file. If a token is found,
+ * it loads the token into the internal token buffer. If no token is found,
+ * the method returns false.
+ * 
+ * @return true if a saved token is successfully loaded, false otherwise.
+ */
 bool Authentication::checkSavedToken()
 {
     // check for saved token, load

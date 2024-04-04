@@ -1,0 +1,10 @@
+<map id="Playing::processTimelineData" name="Playing::processTimelineData">
+<area shape="rect" id="Node000001" title="Processes the timeline data received from the server." alt="" coords="482,31,698,58"/>
+<area shape="rect" id="Node000002" href="$classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="272,5,434,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,34,435,31,435,25,467,29"/>
+<area shape="rect" id="Node000003" href="$classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="111,31,224,58"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="467,47,224,47,224,42,467,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,35,225,39,224,34,256,30"/>
+<area shape="rect" id="Node000004" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,31,63,58"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,47,63,47,63,42,95,42"/>
+</map>

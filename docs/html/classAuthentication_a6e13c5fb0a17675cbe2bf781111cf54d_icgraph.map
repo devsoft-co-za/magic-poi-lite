@@ -1,0 +1,5 @@
+<map id="Authentication::checkSavedToken" name="Authentication::checkSavedToken">
+<area shape="rect" id="Node000001" title="Checks for a saved JWT token and loads it if available." alt="" coords="111,5,313,50"/>
+<area shape="rect" id="Node000002" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,14,63,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,30,63,30,63,25,95,25"/>
+</map>

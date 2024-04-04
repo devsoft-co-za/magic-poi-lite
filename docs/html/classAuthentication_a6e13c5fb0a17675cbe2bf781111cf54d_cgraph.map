@@ -1,0 +1,5 @@
+<map id="Authentication::checkSavedToken" name="Authentication::checkSavedToken">
+<area shape="rect" id="Node000001" title="Checks for a saved JWT token and loads it if available." alt="" coords="5,5,208,50"/>
+<area shape="rect" id="Node000002" href="$classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="256,5,471,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,25,240,25,240,30,208,30"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Authentication::readJWTTokenFromFile" name="Authentication::readJWTTokenFromFile">
+<area shape="rect" id="Node000001" title="Reads JWT token from a file stored on LittleFS." alt="" coords="361,36,576,81"/>
+<area shape="rect" id="Node000002" href="$classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="111,5,313,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="345,46,313,42,314,37,346,41"/>
+<area shape="rect" id="Node000004" href="$classLoading.html#a7634c001ec052e10c402e49f5be030db" title="Default constructor for Loading class." alt="" coords="146,74,278,102"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="346,75,278,83,278,78,346,70"/>
+<area shape="rect" id="Node000003" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,14,63,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,30,63,30,63,25,95,25"/>
+</map>

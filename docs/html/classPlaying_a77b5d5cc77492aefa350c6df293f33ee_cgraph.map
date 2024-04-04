@@ -1,0 +1,8 @@
+<map id="Playing::setup" name="Playing::setup">
+<area shape="rect" id="Node000001" title="Sets up the playing process." alt="" coords="5,31,119,58"/>
+<area shape="rect" id="Node000002" href="$classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="167,5,329,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,34,151,30,152,35,120,39"/>
+<area shape="rect" id="Node000003" href="$classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="377,31,592,58"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="119,42,362,42,362,47,119,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,25,362,29,361,34,329,30"/>
+</map>

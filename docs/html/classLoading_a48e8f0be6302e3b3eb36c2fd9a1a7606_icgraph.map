@@ -1,0 +1,9 @@
+<map id="Loading::saveTimeline" name="Loading::saveTimeline">
+<area shape="rect" id="Node000001" title="Saves the timeline data to a file." alt="" coords="473,5,642,33"/>
+<area shape="rect" id="Node000002" href="$classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="267,5,425,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,22,426,22,426,17,458,17"/>
+<area shape="rect" id="Node000003" href="$classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="111,5,219,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="251,22,219,22,219,17,251,17"/>
+<area shape="rect" id="Node000004" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,5,63,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,22,63,22,63,17,95,17"/>
+</map>

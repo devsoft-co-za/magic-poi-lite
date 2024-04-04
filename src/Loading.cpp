@@ -1,3 +1,12 @@
+/**
+ * @file Loading.cpp
+ * @brief Implementation of the Loading class.
+ * 
+ * This class has methods to fetch the user data from MagicPoi api. 
+ * Run on startup - saves timeline to LittleFS for later usage
+ */
+
+
 #include "Loading.h"
 #include <Arduino.h>
 #include <secrets.h>
@@ -6,7 +15,13 @@
 #include <ESP8266HTTPClient.h>
 #include <Authentication.h>
 
-// Constructor definition
+/**
+ * @brief Default constructor for Loading class.
+ * 
+ * This constructor initializes the Loading object. It attempts to load a JWT token 
+ * from a file using the Authentication object. If a token is successfully loaded,
+ * it is stored internally. Otherwise, it prepares to use password login if token loading fails.
+ */
 Loading::Loading()
 {
     // token = authentication.readJWTTokenFromFile(); //todo: add logic to use Password login if this fails
@@ -23,6 +38,19 @@ Loading::Loading()
     }
 }
 
+
+/**
+ * @brief Retrieves the current timeline number from the server.
+ * 
+ * This method sends a GET request to the server to retrieve the current timeline number.
+ * It includes the JWT token in the request headers for authentication. If the request
+ * is successful and the response code is OK, the method returns the timeline number
+ * received from the server. If any error occurs during the HTTP request or the response
+ * code indicates a failure, an empty string is returned.
+ * 
+ * @return A string containing the current timeline number, or an empty string if the
+ * request fails or if the server response code is not OK.
+ */
 String Loading::getTimelineNumber()
 {
     HTTPClient http;
@@ -57,7 +85,19 @@ String Loading::getTimelineNumber()
     return response;
 }
 
-// get timeline and save on disk
+
+/**
+ * @brief Retrieves the timeline data from the server based on the specified timeline number.
+ * 
+ * This method sends a GET request to the server to retrieve the timeline data corresponding
+ * to the provided timeline number. It includes the JWT token in the request headers for authentication.
+ * If the request is successful and the response code is OK, the timeline data is saved and the method
+ * returns true. If any error occurs during the HTTP request or the response code indicates a failure,
+ * the method returns false.
+ * 
+ * @param tln The timeline number to retrieve data for.
+ * @return true if the timeline data is successfully retrieved, false otherwise.
+ */
 bool Loading::getTimeline(String tln)
 {
     HTTPClient http;
@@ -102,6 +142,16 @@ bool Loading::getTimeline(String tln)
     return false;
 }
 
+/**
+ * @brief Saves the timeline data to a file.
+ * 
+ * This method saves the provided timeline data to a file using the LittleFS (Little File System).
+ * If LittleFS initialization succeeds and the file is successfully created and written, 
+ * a success message is printed to the Serial monitor. If there's any failure during 
+ * the file system operation, the method returns without saving the data.
+ * 
+ * @param timelineData The timeline data to be saved to the file.
+ */
 void Loading::saveTimeline(const String &timelineData)
 {
     if (LittleFS.begin())
@@ -117,8 +167,17 @@ void Loading::saveTimeline(const String &timelineData)
     }
 }
 
-//todo: loadTimeline, processTimelineData here?
 
+/**
+ * @brief Loads data required for the application.
+ * 
+ * This method attempts to load data required for the application. It first tries to retrieve the current
+ * timeline number from the server. If successful, it proceeds to load the timeline data. If both operations
+ * succeed, the method returns true indicating successful loading. If any of the operations fail, the method
+ * returns false.
+ * 
+ * @return true if data loading is successful, false otherwise.
+ */
 bool Loading::load()
 {
     //todo: load saved timeline if not able to access internet or auth doesn't work? 

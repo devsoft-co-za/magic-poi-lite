@@ -1,0 +1,9 @@
+<map id="Loading::load" name="Loading::load">
+<area shape="rect" id="Node000001" title="Loads data required for the application." alt="" coords="5,32,114,60"/>
+<area shape="rect" id="Node000002" href="$classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="188,5,346,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,36,172,29,172,34,114,42"/>
+<area shape="rect" id="Node000004" href="$classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="162,57,372,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="114,50,147,54,146,59,114,55"/>
+<area shape="rect" id="Node000003" href="$classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="420,5,588,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,17,404,17,404,22,346,22"/>
+</map>

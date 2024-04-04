@@ -1,0 +1,5 @@
+<map id="Authentication::authenticate" name="Authentication::authenticate">
+<area shape="rect" id="Node000001" title="Authenticates the client with the server." alt="" coords="111,5,317,33"/>
+<area shape="rect" id="Node000002" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,5,63,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,22,63,22,63,17,95,17"/>
+</map>

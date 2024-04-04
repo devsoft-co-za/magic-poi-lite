@@ -1,0 +1,5 @@
+<map id="Loading::getTimeline" name="Loading::getTimeline">
+<area shape="rect" id="Node000001" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="5,5,164,33"/>
+<area shape="rect" id="Node000002" href="$classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="212,5,380,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,17,196,17,196,22,164,22"/>
+</map>

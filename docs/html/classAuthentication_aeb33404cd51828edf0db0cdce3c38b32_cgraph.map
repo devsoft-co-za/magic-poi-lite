@@ -1,0 +1,5 @@
+<map id="Authentication::authenticate" name="Authentication::authenticate">
+<area shape="rect" id="Node000001" title="Authenticates the client with the server." alt="" coords="5,14,212,42"/>
+<area shape="rect" id="Node000002" href="$classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="260,5,477,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,25,244,25,244,30,212,30"/>
+</map>

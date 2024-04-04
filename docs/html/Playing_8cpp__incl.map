@@ -1,0 +1,23 @@
+<map id="src/Playing.cpp" name="src/Playing.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the Playing class." alt="" coords="190,5,309,33"/>
+<area shape="rect" id="Node000002" href="$Playing_8h.html" title="Declaration of the Playing class." alt="" coords="37,81,118,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,36,123,77,121,72,218,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="163,232,246,260"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="235,35,214,56,197,82,189,117,188,153,199,217,193,218,183,154,184,116,193,80,210,52,231,31"/>
+<area shape="rect" id="Node000005" href="$Loading_8h.html" title="Declaration of the Loading class." alt="" coords="208,81,292,109"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="252,34,252,65,247,65,247,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="316,81,397,109"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="270,31,327,70,324,74,267,36"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="421,81,502,109"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="288,31,410,73,409,78,287,36"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,111,36,126,18,145,9,164,9,173,13,183,41,209,75,226,112,236,147,241,147,247,111,242,73,231,37,213,9,186,4,175,3,163,14,142,33,122,54,107"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="23,157,133,184"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="80,109,80,141,75,141,75,109"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="248,110,215,218,210,217,243,108"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="288,232,387,260"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="293,105,356,127,383,141,400,155,405,174,400,193,387,210,371,225,368,221,383,206,395,190,400,174,395,158,380,145,354,132,292,110"/>
+<area shape="rect" id="Node000007" href="$Authentication_8h.html" title="Declaration of the Authentication class." alt="" coords="258,157,386,184"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="264,107,300,144,296,147,261,111"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="302,187,239,226,236,222,299,183"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="327,184,334,216,329,218,322,185"/>
+</map>

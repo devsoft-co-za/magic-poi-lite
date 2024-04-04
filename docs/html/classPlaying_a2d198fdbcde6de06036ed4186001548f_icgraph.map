@@ -1,0 +1,5 @@
+<map id="Playing::play" name="Playing::play">
+<area shape="rect" id="Node000001" title="Plays the timeline data." alt="" coords="103,5,208,33"/>
+<area shape="rect" id="Node000002" href="$Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="5,5,55,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,22,55,22,55,17,87,17"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="src/Loading.h" name="src/Loading.h">
+<area shape="rect" id="Node000001" title="Declaration of the Loading class." alt="" coords="52,5,159,33"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,157,89,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,36,53,55,32,82,28,97,28,112,36,142,31,144,23,113,23,96,27,80,50,51,77,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="135,157,234,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,31,161,51,184,80,192,111,192,142,187,142,187,112,179,82,158,55,130,36"/>
+<area shape="rect" id="Node000004" href="$Authentication_8h.html" title="Declaration of the Authentication class." alt="" coords="42,81,170,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,34,108,65,103,65,103,34"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="97,111,69,146,65,143,93,108"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="122,107,161,144,157,148,118,111"/>
+</map>

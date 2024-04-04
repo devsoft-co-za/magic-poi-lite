@@ -1,0 +1,15 @@
+<map id="src/Authentication.h" name="src/Authentication.h">
+<area shape="rect" id="Node000001" title="Declaration of the Authentication class." alt="" coords="178,5,330,33"/>
+<area shape="rect" id="Node000002" href="$Authentication_8cpp.html" title="Implementation of the Authentication class." alt="" coords="5,81,172,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,42,119,83,117,78,209,37"/>
+<area shape="rect" id="Node000003" href="$Loading_8cpp.html" title="Implementation of the Loading class." alt="" coords="93,157,215,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,47,165,158,160,155,235,44"/>
+<area shape="rect" id="Node000004" href="$Loading_8h.html" title="Declaration of the Loading class." alt="" coords="246,81,353,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="272,45,293,79,289,82,268,48"/>
+<area shape="rect" id="Node000005" href="$Main_8cpp.html" title="Main program file." alt="" coords="384,157,487,184"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="300,37,333,56,366,79,404,119,430,155,425,158,400,122,363,83,331,60,297,42"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="261,118,181,159,178,154,258,114"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="338,114,412,154,410,159,336,119"/>
+<area shape="rect" id="Node000006" href="$Playing_8cpp.html" title="Implementation of the Playing class." alt="" coords="240,157,359,184"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="302,124,302,156,297,156,297,124"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Playing::useTimelineData" name="Playing::useTimelineData">
+<area shape="rect" id="Node000001" title="Uses the timeline data to change LED colors over time." alt="" coords="5,5,194,33"/>
+<area shape="rect" id="Node000002" href="$classPlaying.html#af3071d1fb83767f99774fd50ff65cc40" title="Changes the colors of the RGB LED based on the provided choice." alt="" coords="242,5,415,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,17,226,17,226,22,194,22"/>
+</map>
