@@ -33,11 +33,19 @@ private:
     int maxTimingsNum = 50;
 
     /**
+     * @brief Variable to use int tinelineFilePath.
+     *
+     * This variable is a number which allows mulitple timelines to be stored in sequence.
+     */
+    String timelineNumber = "0";
+    
+    /**
      * @brief File path of the timeline file.
      *
      * This variable stores the file path of the timeline data file.
      */
-    String timelineFilePath;
+    
+    String timelineFilePath = "/timeline" + timelineNumber + ".txt";
 
     /**
      * @brief Array of keys in the timeline JSON.

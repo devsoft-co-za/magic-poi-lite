@@ -115,7 +115,7 @@ void setup()
 
   // Connecting to WiFi and authenticating
   bool isAuthenticated = authentication.checkSavedToken();
-  isAuthenticated = false; //test re-auth - todo: tie this to a button press
+  isAuthenticated = false; //test re-auth - todo: tie this to a button press - todo: not working without this? loading timeline from disk error? 
   //Check disk for saved JWT auth and use it:
   if (isAuthenticated)
   {

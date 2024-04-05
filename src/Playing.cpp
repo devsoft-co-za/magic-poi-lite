@@ -170,6 +170,8 @@ int Playing::getMaxTimingsNum()
  */
 String Playing::loadTimeline() // load from disk
 {
+    Serial.print("Loading Timeline from LittleFS ");
+    Serial.println(timelineFilePath);
     String timelineData = "";
     if (LittleFS.begin())
     {
