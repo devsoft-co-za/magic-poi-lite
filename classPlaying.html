@@ -123,7 +123,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a405fe82242092a8dfabd90c21cd4ed62" id="r_a405fe82242092a8dfabd90c21cd4ed62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a405fe82242092a8dfabd90c21cd4ed62">maxTimingsNum</a> = 50</td></tr>
 <tr class="memdesc:a405fe82242092a8dfabd90c21cd4ed62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of timings in the timeline.  <br /></td></tr>
 <tr class="separator:a405fe82242092a8dfabd90c21cd4ed62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a89d1273bf94bf309ef5963314c3910" id="r_a6a89d1273bf94bf309ef5963314c3910"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a></td></tr>
+<tr class="memitem:ada3287f449fb707485dd7e9a940a6f9e" id="r_ada3287f449fb707485dd7e9a940a6f9e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada3287f449fb707485dd7e9a940a6f9e">timelineNumber</a> = &quot;0&quot;</td></tr>
+<tr class="memdesc:ada3287f449fb707485dd7e9a940a6f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable to use int tinelineFilePath.  <br /></td></tr>
+<tr class="separator:ada3287f449fb707485dd7e9a940a6f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a89d1273bf94bf309ef5963314c3910" id="r_a6a89d1273bf94bf309ef5963314c3910"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a> = &quot;/timeline&quot; + <a class="el" href="#ada3287f449fb707485dd7e9a940a6f9e">timelineNumber</a> + &quot;.txt&quot;</td></tr>
 <tr class="memdesc:a6a89d1273bf94bf309ef5963314c3910"><td class="mdescLeft">&#160;</td><td class="mdescRight">File path of the timeline file.  <br /></td></tr>
 <tr class="separator:a6a89d1273bf94bf309ef5963314c3910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a678c92adbdb8d83782882803a7335ffd" id="r_a678c92adbdb8d83782882803a7335ffd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a678c92adbdb8d83782882803a7335ffd">timeline_keys</a> [50]</td></tr>
@@ -236,63 +239,63 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>currentIndex</b> = 0</
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>{</div>
-<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">switch</span> (choice)</div>
-<div class="line"><span class="lineno">  234</span>    {</div>
-<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">case</span> 0: <span class="comment">// red</span></div>
-<div class="line"><span class="lineno">  236</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  237</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  238</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  239</span>        Serial.println(<span class="stringliteral">&quot;RED&quot;</span>);</div>
-<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">case</span> 1: <span class="comment">// green</span></div>
-<div class="line"><span class="lineno">  242</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  243</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  244</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  245</span>        Serial.println(<span class="stringliteral">&quot;GREEN&quot;</span>);</div>
-<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">case</span> 2: <span class="comment">// blue</span></div>
-<div class="line"><span class="lineno">  248</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  249</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  250</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  251</span>        Serial.println(<span class="stringliteral">&quot;BLUE&quot;</span>);</div>
-<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  253</span>    <span class="keywordflow">case</span> 3: <span class="comment">// cyan</span></div>
-<div class="line"><span class="lineno">  254</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  255</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  256</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  257</span>        Serial.println(<span class="stringliteral">&quot;CYAN&quot;</span>);</div>
-<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">case</span> 4: <span class="comment">// magenta</span></div>
-<div class="line"><span class="lineno">  260</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  261</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  262</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  263</span>        Serial.println(<span class="stringliteral">&quot;MAGENTA&quot;</span>);</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  265</span>    <span class="keywordflow">case</span> 5: <span class="comment">// yellow</span></div>
-<div class="line"><span class="lineno">  266</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  267</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  268</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  269</span>        Serial.println(<span class="stringliteral">&quot;YELLOW&quot;</span>);</div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">case</span> 6: <span class="comment">// white</span></div>
-<div class="line"><span class="lineno">  272</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  273</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  274</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
-<div class="line"><span class="lineno">  275</span>        Serial.println(<span class="stringliteral">&quot;WHITE&quot;</span>);</div>
-<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  277</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  278</span>    <span class="comment">//todo: add more colours - default is shown for all strobe effects currently</span></div>
-<div class="line"><span class="lineno">  279</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  280</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  281</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
-<div class="line"><span class="lineno">  282</span>        Serial.println(<span class="stringliteral">&quot;DEFAULT&quot;</span>);</div>
-<div class="line"><span class="lineno">  283</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  284</span>    }</div>
-<div class="line"><span class="lineno">  285</span>}</div>
-<div class="ttc" id="aMain_8cpp_html_a12e0822e230092cca844cd048a9d6cd6"><div class="ttname"><a href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a></div><div class="ttdeci">const int greenLEDPin</div><div class="ttdoc">Pin number for the green LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:61</div></div>
-<div class="ttc" id="aMain_8cpp_html_a2a37a0731c2f8691dd9e3abf460fd1f9"><div class="ttname"><a href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a></div><div class="ttdeci">const int redLEDPin</div><div class="ttdoc">Pin number for the red LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:68</div></div>
-<div class="ttc" id="aMain_8cpp_html_abd394e3bd0c2ba4048dea776c6557cd1"><div class="ttname"><a href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a></div><div class="ttdeci">const int blueLEDPin</div><div class="ttdoc">Pin number for the blue LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:54</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  234</span>{</div>
+<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">switch</span> (choice)</div>
+<div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">case</span> 0: <span class="comment">// red</span></div>
+<div class="line"><span class="lineno">  238</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  239</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  240</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  241</span>        Serial.println(<span class="stringliteral">&quot;RED&quot;</span>);</div>
+<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">case</span> 1: <span class="comment">// green</span></div>
+<div class="line"><span class="lineno">  244</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  245</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  246</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  247</span>        Serial.println(<span class="stringliteral">&quot;GREEN&quot;</span>);</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">case</span> 2: <span class="comment">// blue</span></div>
+<div class="line"><span class="lineno">  250</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  251</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  252</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  253</span>        Serial.println(<span class="stringliteral">&quot;BLUE&quot;</span>);</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">case</span> 3: <span class="comment">// cyan</span></div>
+<div class="line"><span class="lineno">  256</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  257</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  258</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  259</span>        Serial.println(<span class="stringliteral">&quot;CYAN&quot;</span>);</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">case</span> 4: <span class="comment">// magenta</span></div>
+<div class="line"><span class="lineno">  262</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  263</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  264</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  265</span>        Serial.println(<span class="stringliteral">&quot;MAGENTA&quot;</span>);</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  267</span>    <span class="keywordflow">case</span> 5: <span class="comment">// yellow</span></div>
+<div class="line"><span class="lineno">  268</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  269</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  270</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  271</span>        Serial.println(<span class="stringliteral">&quot;YELLOW&quot;</span>);</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">case</span> 6: <span class="comment">// white</span></div>
+<div class="line"><span class="lineno">  274</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  275</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  276</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 255);</div>
+<div class="line"><span class="lineno">  277</span>        Serial.println(<span class="stringliteral">&quot;WHITE&quot;</span>);</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  280</span>    <span class="comment">//todo: add more colours - default is shown for all strobe effects currently</span></div>
+<div class="line"><span class="lineno">  281</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  282</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  283</span>        analogWrite(<a class="code hl_variable" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, 0);</div>
+<div class="line"><span class="lineno">  284</span>        Serial.println(<span class="stringliteral">&quot;DEFAULT&quot;</span>);</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  286</span>    }</div>
+<div class="line"><span class="lineno">  287</span>}</div>
+<div class="ttc" id="aMain_8cpp_html_a12e0822e230092cca844cd048a9d6cd6"><div class="ttname"><a href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a></div><div class="ttdeci">const int greenLEDPin</div><div class="ttdoc">Pin number for the green LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:60</div></div>
+<div class="ttc" id="aMain_8cpp_html_a2a37a0731c2f8691dd9e3abf460fd1f9"><div class="ttname"><a href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a></div><div class="ttdeci">const int redLEDPin</div><div class="ttdoc">Pin number for the red LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:67</div></div>
+<div class="ttc" id="aMain_8cpp_html_abd394e3bd0c2ba4048dea776c6557cd1"><div class="ttname"><a href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a></div><div class="ttdeci">const int blueLEDPin</div><div class="ttdoc">Pin number for the blue LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:53</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Main_8cpp.html#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, <a class="el" href="Main_8cpp.html#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, and <a class="el" href="Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>.</p>
 
@@ -335,7 +338,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  132</span>{</div>
 <div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a411b802681aa29dbbb338172fec265ab">colours</a>;</div>
 <div class="line"><span class="lineno">  134</span>}</div>
-<div class="ttc" id="aclassPlaying_html_a411b802681aa29dbbb338172fec265ab"><div class="ttname"><a href="#a411b802681aa29dbbb338172fec265ab">Playing::colours</a></div><div class="ttdeci">int colours[50]</div><div class="ttdoc">Array storing colors extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:87</div></div>
+<div class="ttc" id="aclassPlaying_html_a411b802681aa29dbbb338172fec265ab"><div class="ttname"><a href="#a411b802681aa29dbbb338172fec265ab">Playing::colours</a></div><div class="ttdeci">int colours[50]</div><div class="ttdoc">Array storing colors extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:95</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a411b802681aa29dbbb338172fec265ab">colours</a>.</p>
 
@@ -389,7 +392,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">  144</span>{</div>
 <div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>;</div>
 <div class="line"><span class="lineno">  146</span>}</div>
-<div class="ttc" id="aclassPlaying_html_a5001bdfc4a4c43c9fc86ebc5bcc5c93e"><div class="ttname"><a href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">Playing::timings</a></div><div class="ttdeci">long timings[50]</div><div class="ttdoc">Array storing timings extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:82</div></div>
+<div class="ttc" id="aclassPlaying_html_a5001bdfc4a4c43c9fc86ebc5bcc5c93e"><div class="ttname"><a href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">Playing::timings</a></div><div class="ttdeci">long timings[50]</div><div class="ttdoc">Array storing timings extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:90</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>.</p>
 
@@ -414,27 +417,29 @@ Here is the caller graph for this function:</div>
 <p>This method loads the timeline data from the disk using the LittleFS (Little File System). If LittleFS initialization succeeds and the file exists, the method reads the data from the file, processes it using the <a class="el" href="#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server.">processTimelineData()</a> method, and returns the timeline data as a string. If the file doesn't exist or if there's any failure during the file system operation, an empty string is returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>A string containing the loaded timeline data, or an empty string if the data couldn't be loaded. </dd></dl>
 <div class="fragment"><div class="line"><span class="lineno">  172</span>{</div>
-<div class="line"><span class="lineno">  173</span>    String timelineData = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">if</span> (LittleFS.begin())</div>
-<div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (LittleFS.exists(<a class="code hl_variable" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a>))</div>
-<div class="line"><span class="lineno">  177</span>        {</div>
-<div class="line"><span class="lineno">  178</span>            File file = LittleFS.open(<a class="code hl_variable" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a>, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">if</span> (file)</div>
-<div class="line"><span class="lineno">  180</span>            {</div>
-<div class="line"><span class="lineno">  181</span>                timelineData = file.readString();</div>
-<div class="line"><span class="lineno">  182</span>                file.close();</div>
-<div class="line"><span class="lineno">  183</span>                Serial.println(<span class="stringliteral">&quot;Timeline data:&quot;</span>);</div>
-<div class="line"><span class="lineno">  184</span>                Serial.println(timelineData);</div>
-<div class="line"><span class="lineno">  185</span>                <a class="code hl_function" href="#a4f81c9a5de20fa2242e31c1ee27df7a3">processTimelineData</a>(timelineData); <span class="comment">// Process the timeline data. Todo: error here?</span></div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span>        }</div>
-<div class="line"><span class="lineno">  188</span>        LittleFS.end();</div>
-<div class="line"><span class="lineno">  189</span>    }</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> timelineData;</div>
-<div class="line"><span class="lineno">  191</span>}</div>
+<div class="line"><span class="lineno">  173</span>    Serial.print(<span class="stringliteral">&quot;Loading Timeline from LittleFS &quot;</span>);</div>
+<div class="line"><span class="lineno">  174</span>    Serial.println(<a class="code hl_variable" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a>);</div>
+<div class="line"><span class="lineno">  175</span>    String timelineData = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">if</span> (LittleFS.begin())</div>
+<div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> (LittleFS.exists(<a class="code hl_variable" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a>))</div>
+<div class="line"><span class="lineno">  179</span>        {</div>
+<div class="line"><span class="lineno">  180</span>            File file = LittleFS.open(<a class="code hl_variable" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordflow">if</span> (file)</div>
+<div class="line"><span class="lineno">  182</span>            {</div>
+<div class="line"><span class="lineno">  183</span>                timelineData = file.readString();</div>
+<div class="line"><span class="lineno">  184</span>                file.close();</div>
+<div class="line"><span class="lineno">  185</span>                Serial.println(<span class="stringliteral">&quot;Timeline data:&quot;</span>);</div>
+<div class="line"><span class="lineno">  186</span>                Serial.println(timelineData);</div>
+<div class="line"><span class="lineno">  187</span>                <a class="code hl_function" href="#a4f81c9a5de20fa2242e31c1ee27df7a3">processTimelineData</a>(timelineData); <span class="comment">// Process the timeline data. Todo: error here?</span></div>
+<div class="line"><span class="lineno">  188</span>            }</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+<div class="line"><span class="lineno">  190</span>        LittleFS.end();</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">return</span> timelineData;</div>
+<div class="line"><span class="lineno">  193</span>}</div>
 <div class="ttc" id="aclassPlaying_html_a4f81c9a5de20fa2242e31c1ee27df7a3"><div class="ttname"><a href="#a4f81c9a5de20fa2242e31c1ee27df7a3">Playing::processTimelineData</a></div><div class="ttdeci">void processTimelineData(const String &amp;timelineData)</div><div class="ttdoc">Processes the timeline data received from the server.</div><div class="ttdef"><b>Definition</b> Playing.cpp:41</div></div>
-<div class="ttc" id="aclassPlaying_html_a6a89d1273bf94bf309ef5963314c3910"><div class="ttname"><a href="#a6a89d1273bf94bf309ef5963314c3910">Playing::timelineFilePath</a></div><div class="ttdeci">String timelineFilePath</div><div class="ttdoc">File path of the timeline file.</div><div class="ttdef"><b>Definition</b> Playing.h:40</div></div>
+<div class="ttc" id="aclassPlaying_html_a6a89d1273bf94bf309ef5963314c3910"><div class="ttname"><a href="#a6a89d1273bf94bf309ef5963314c3910">Playing::timelineFilePath</a></div><div class="ttdeci">String timelineFilePath</div><div class="ttdoc">File path of the timeline file.</div><div class="ttdef"><b>Definition</b> Playing.h:48</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a4f81c9a5de20fa2242e31c1ee27df7a3">processTimelineData()</a>, and <a class="el" href="#a6a89d1273bf94bf309ef5963314c3910">timelineFilePath</a>.</p>
 
@@ -454,11 +459,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlaying_aff641fcbb968459528336d2c3732b9bd_icgraph.png" border="0" usemap="#aclassPlaying_aff641fcbb968459528336d2c3732b9bd_icgraph" alt=""/></div>
 <map name="aclassPlaying_aff641fcbb968459528336d2c3732b9bd_icgraph" id="aclassPlaying_aff641fcbb968459528336d2c3732b9bd_icgraph">
-<area shape="rect" title="Loads the timeline data from the disk." alt="" coords="272,5,434,33"/>
-<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="111,5,224,33"/>
-<area shape="poly" title=" " alt="" coords="256,22,224,22,224,17,256,17"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,5,63,33"/>
-<area shape="poly" title=" " alt="" coords="95,22,63,22,63,17,95,17"/>
+<area shape="rect" title="Loads the timeline data from the disk." alt="" coords="556,32,719,60"/>
+<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="395,32,508,60"/>
+<area shape="poly" title=" " alt="" coords="541,49,509,49,509,43,541,43"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="380,49,348,49,348,43,380,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 
@@ -481,27 +490,27 @@ Here is the caller graph for this function:</div>
 
 <p>Plays the timeline data. </p>
 <p>This method plays the timeline data by repeatedly calling the <a class="el" href="#a5e24c92b5e869946d98abd178eff3061" title="Uses the timeline data to change LED colors over time.">useTimelineData()</a> method, which changes LED colors over time according to the timeline data. </p>
-<div class="fragment"><div class="line"><span class="lineno">  401</span>{</div>
-<div class="line"><span class="lineno">  402</span>    <span class="comment">// int num_timings = getMaxTimingsNum();</span></div>
-<div class="line"><span class="lineno">  403</span>    <span class="comment">// // Print the colours array</span></div>
-<div class="line"><span class="lineno">  404</span>    <span class="comment">// Serial.print(&quot;Colours in memory: &quot;);</span></div>
-<div class="line"><span class="lineno">  405</span>    <span class="comment">// for (int i = 0; i &lt; num_timings; i++)</span></div>
-<div class="line"><span class="lineno">  406</span>    <span class="comment">// {</span></div>
-<div class="line"><span class="lineno">  407</span>    <span class="comment">//     Serial.print(colours[i]);</span></div>
-<div class="line"><span class="lineno">  408</span>    <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
-<div class="line"><span class="lineno">  409</span>    <span class="comment">// }</span></div>
-<div class="line"><span class="lineno">  410</span>    <span class="comment">// Serial.println(); // Print a new line after the array</span></div>
-<div class="line"><span class="lineno">  411</span>    <span class="comment">// // Print the timeline array</span></div>
-<div class="line"><span class="lineno">  412</span>    <span class="comment">// Serial.print(&quot;Timings in memory: &quot;);</span></div>
-<div class="line"><span class="lineno">  413</span>    <span class="comment">// for (int i = 0; i &lt; num_timings; i++)</span></div>
-<div class="line"><span class="lineno">  414</span>    <span class="comment">// {</span></div>
-<div class="line"><span class="lineno">  415</span>    <span class="comment">//     Serial.print(timings[i]);</span></div>
-<div class="line"><span class="lineno">  416</span>    <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
-<div class="line"><span class="lineno">  417</span>    <span class="comment">// }</span></div>
-<div class="line"><span class="lineno">  418</span>    <span class="comment">// Serial.println(); // Print a new line after the array</span></div>
-<div class="line"><span class="lineno">  419</span>    <a class="code hl_function" href="#a5e24c92b5e869946d98abd178eff3061">useTimelineData</a>();</div>
-<div class="line"><span class="lineno">  420</span>}</div>
-<div class="ttc" id="aclassPlaying_html_a5e24c92b5e869946d98abd178eff3061"><div class="ttname"><a href="#a5e24c92b5e869946d98abd178eff3061">Playing::useTimelineData</a></div><div class="ttdeci">void useTimelineData()</div><div class="ttdoc">Uses the timeline data to change LED colors over time.</div><div class="ttdef"><b>Definition</b> Playing.cpp:298</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  403</span>{</div>
+<div class="line"><span class="lineno">  404</span>    <span class="comment">// int num_timings = getMaxTimingsNum();</span></div>
+<div class="line"><span class="lineno">  405</span>    <span class="comment">// // Print the colours array</span></div>
+<div class="line"><span class="lineno">  406</span>    <span class="comment">// Serial.print(&quot;Colours in memory: &quot;);</span></div>
+<div class="line"><span class="lineno">  407</span>    <span class="comment">// for (int i = 0; i &lt; num_timings; i++)</span></div>
+<div class="line"><span class="lineno">  408</span>    <span class="comment">// {</span></div>
+<div class="line"><span class="lineno">  409</span>    <span class="comment">//     Serial.print(colours[i]);</span></div>
+<div class="line"><span class="lineno">  410</span>    <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
+<div class="line"><span class="lineno">  411</span>    <span class="comment">// }</span></div>
+<div class="line"><span class="lineno">  412</span>    <span class="comment">// Serial.println(); // Print a new line after the array</span></div>
+<div class="line"><span class="lineno">  413</span>    <span class="comment">// // Print the timeline array</span></div>
+<div class="line"><span class="lineno">  414</span>    <span class="comment">// Serial.print(&quot;Timings in memory: &quot;);</span></div>
+<div class="line"><span class="lineno">  415</span>    <span class="comment">// for (int i = 0; i &lt; num_timings; i++)</span></div>
+<div class="line"><span class="lineno">  416</span>    <span class="comment">// {</span></div>
+<div class="line"><span class="lineno">  417</span>    <span class="comment">//     Serial.print(timings[i]);</span></div>
+<div class="line"><span class="lineno">  418</span>    <span class="comment">//     Serial.print(&quot; &quot;);</span></div>
+<div class="line"><span class="lineno">  419</span>    <span class="comment">// }</span></div>
+<div class="line"><span class="lineno">  420</span>    <span class="comment">// Serial.println(); // Print a new line after the array</span></div>
+<div class="line"><span class="lineno">  421</span>    <a class="code hl_function" href="#a5e24c92b5e869946d98abd178eff3061">useTimelineData</a>();</div>
+<div class="line"><span class="lineno">  422</span>}</div>
+<div class="ttc" id="aclassPlaying_html_a5e24c92b5e869946d98abd178eff3061"><div class="ttname"><a href="#a5e24c92b5e869946d98abd178eff3061">Playing::useTimelineData</a></div><div class="ttdeci">void useTimelineData()</div><div class="ttdoc">Uses the timeline data to change LED colors over time.</div><div class="ttdef"><b>Definition</b> Playing.cpp:300</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a5e24c92b5e869946d98abd178eff3061">useTimelineData()</a>.</p>
 
@@ -635,18 +644,18 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  120</span>    <span class="comment">// todo: test:</span></div>
 <div class="line"><span class="lineno">  121</span>    <a class="code hl_variable" href="#ad09488018f63425ea8b6168556da3f5d">playStartTime</a> = millis();</div>
 <div class="line"><span class="lineno">  122</span>}</div>
-<div class="ttc" id="aMain_8cpp_html_a1f639e12141251259a876ef492f55df6"><div class="ttname"><a href="Main_8cpp.html#a1f639e12141251259a876ef492f55df6">led</a></div><div class="ttdeci">#define led</div><div class="ttdoc">Pin number for the built-in LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:47</div></div>
-<div class="ttc" id="aclassPlaying_html_a07054319b1135b8aa10a9d234c93a617"><div class="ttname"><a href="#a07054319b1135b8aa10a9d234c93a617">Playing::redVal</a></div><div class="ttdeci">JsonVariant redVal</div><div class="ttdoc">Red color value extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:52</div></div>
-<div class="ttc" id="aclassPlaying_html_a678c92adbdb8d83782882803a7335ffd"><div class="ttname"><a href="#a678c92adbdb8d83782882803a7335ffd">Playing::timeline_keys</a></div><div class="ttdeci">const char * timeline_keys[50]</div><div class="ttdoc">Array of keys in the timeline JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:47</div></div>
-<div class="ttc" id="aclassPlaying_html_a86da52f6c86801c7e34e09962228ec66"><div class="ttname"><a href="#a86da52f6c86801c7e34e09962228ec66">Playing::greenInt</a></div><div class="ttdeci">int greenInt</div><div class="ttdoc">Green color value as an integer.</div><div class="ttdef"><b>Definition</b> Playing.h:72</div></div>
-<div class="ttc" id="aclassPlaying_html_a8b93e3901a9ec1f8e90ab4734060f02a"><div class="ttname"><a href="#a8b93e3901a9ec1f8e90ab4734060f02a">Playing::root</a></div><div class="ttdeci">JsonObject root</div><div class="ttdoc">JSON object root.</div><div class="ttdef"><b>Definition</b> Playing.h:102</div></div>
-<div class="ttc" id="aclassPlaying_html_ab15a7745b108af629ee50453a99d87dd"><div class="ttname"><a href="#ab15a7745b108af629ee50453a99d87dd">Playing::blueVal</a></div><div class="ttdeci">JsonVariant blueVal</div><div class="ttdoc">Blue color value extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:62</div></div>
-<div class="ttc" id="aclassPlaying_html_ac271af5e2dd5f5c765522f97f8763239"><div class="ttname"><a href="#ac271af5e2dd5f5c765522f97f8763239">Playing::greenVal</a></div><div class="ttdeci">JsonVariant greenVal</div><div class="ttdoc">Green color value extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:57</div></div>
-<div class="ttc" id="aclassPlaying_html_acfb6dd03503fdb31cd3689f9cd52c38a"><div class="ttname"><a href="#acfb6dd03503fdb31cd3689f9cd52c38a">Playing::already_got_data</a></div><div class="ttdeci">bool already_got_data</div><div class="ttdoc">Flag indicating whether timeline data has been loaded.</div><div class="ttdef"><b>Definition</b> Playing.h:92</div></div>
-<div class="ttc" id="aclassPlaying_html_ad09488018f63425ea8b6168556da3f5d"><div class="ttname"><a href="#ad09488018f63425ea8b6168556da3f5d">Playing::playStartTime</a></div><div class="ttdeci">long playStartTime</div><div class="ttdoc">Timestamp when timeline playing started.</div><div class="ttdef"><b>Definition</b> Playing.h:97</div></div>
-<div class="ttc" id="aclassPlaying_html_ad3ebf8f89d94724bfe2974997a7a6ea4"><div class="ttname"><a href="#ad3ebf8f89d94724bfe2974997a7a6ea4">Playing::blueInt</a></div><div class="ttdeci">int blueInt</div><div class="ttdoc">Blue color value as an integer.</div><div class="ttdef"><b>Definition</b> Playing.h:77</div></div>
-<div class="ttc" id="aclassPlaying_html_aec11c7adad14253b91214b8c7932df9d"><div class="ttname"><a href="#aec11c7adad14253b91214b8c7932df9d">Playing::iter</a></div><div class="ttdeci">int iter</div><div class="ttdoc">Iterator for timeline data.</div><div class="ttdef"><b>Definition</b> Playing.h:107</div></div>
-<div class="ttc" id="aclassPlaying_html_af48ca7bb0f03c608845109a76e28ca9f"><div class="ttname"><a href="#af48ca7bb0f03c608845109a76e28ca9f">Playing::redInt</a></div><div class="ttdeci">int redInt</div><div class="ttdoc">Red color value as an integer.</div><div class="ttdef"><b>Definition</b> Playing.h:67</div></div>
+<div class="ttc" id="aMain_8cpp_html_a1f639e12141251259a876ef492f55df6"><div class="ttname"><a href="Main_8cpp.html#a1f639e12141251259a876ef492f55df6">led</a></div><div class="ttdeci">#define led</div><div class="ttdoc">Pin number for the built-in LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:46</div></div>
+<div class="ttc" id="aclassPlaying_html_a07054319b1135b8aa10a9d234c93a617"><div class="ttname"><a href="#a07054319b1135b8aa10a9d234c93a617">Playing::redVal</a></div><div class="ttdeci">JsonVariant redVal</div><div class="ttdoc">Red color value extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:60</div></div>
+<div class="ttc" id="aclassPlaying_html_a678c92adbdb8d83782882803a7335ffd"><div class="ttname"><a href="#a678c92adbdb8d83782882803a7335ffd">Playing::timeline_keys</a></div><div class="ttdeci">const char * timeline_keys[50]</div><div class="ttdoc">Array of keys in the timeline JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:55</div></div>
+<div class="ttc" id="aclassPlaying_html_a86da52f6c86801c7e34e09962228ec66"><div class="ttname"><a href="#a86da52f6c86801c7e34e09962228ec66">Playing::greenInt</a></div><div class="ttdeci">int greenInt</div><div class="ttdoc">Green color value as an integer.</div><div class="ttdef"><b>Definition</b> Playing.h:80</div></div>
+<div class="ttc" id="aclassPlaying_html_a8b93e3901a9ec1f8e90ab4734060f02a"><div class="ttname"><a href="#a8b93e3901a9ec1f8e90ab4734060f02a">Playing::root</a></div><div class="ttdeci">JsonObject root</div><div class="ttdoc">JSON object root.</div><div class="ttdef"><b>Definition</b> Playing.h:110</div></div>
+<div class="ttc" id="aclassPlaying_html_ab15a7745b108af629ee50453a99d87dd"><div class="ttname"><a href="#ab15a7745b108af629ee50453a99d87dd">Playing::blueVal</a></div><div class="ttdeci">JsonVariant blueVal</div><div class="ttdoc">Blue color value extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:70</div></div>
+<div class="ttc" id="aclassPlaying_html_ac271af5e2dd5f5c765522f97f8763239"><div class="ttname"><a href="#ac271af5e2dd5f5c765522f97f8763239">Playing::greenVal</a></div><div class="ttdeci">JsonVariant greenVal</div><div class="ttdoc">Green color value extracted from JSON.</div><div class="ttdef"><b>Definition</b> Playing.h:65</div></div>
+<div class="ttc" id="aclassPlaying_html_acfb6dd03503fdb31cd3689f9cd52c38a"><div class="ttname"><a href="#acfb6dd03503fdb31cd3689f9cd52c38a">Playing::already_got_data</a></div><div class="ttdeci">bool already_got_data</div><div class="ttdoc">Flag indicating whether timeline data has been loaded.</div><div class="ttdef"><b>Definition</b> Playing.h:100</div></div>
+<div class="ttc" id="aclassPlaying_html_ad09488018f63425ea8b6168556da3f5d"><div class="ttname"><a href="#ad09488018f63425ea8b6168556da3f5d">Playing::playStartTime</a></div><div class="ttdeci">long playStartTime</div><div class="ttdoc">Timestamp when timeline playing started.</div><div class="ttdef"><b>Definition</b> Playing.h:105</div></div>
+<div class="ttc" id="aclassPlaying_html_ad3ebf8f89d94724bfe2974997a7a6ea4"><div class="ttname"><a href="#ad3ebf8f89d94724bfe2974997a7a6ea4">Playing::blueInt</a></div><div class="ttdeci">int blueInt</div><div class="ttdoc">Blue color value as an integer.</div><div class="ttdef"><b>Definition</b> Playing.h:85</div></div>
+<div class="ttc" id="aclassPlaying_html_aec11c7adad14253b91214b8c7932df9d"><div class="ttname"><a href="#aec11c7adad14253b91214b8c7932df9d">Playing::iter</a></div><div class="ttdeci">int iter</div><div class="ttdoc">Iterator for timeline data.</div><div class="ttdef"><b>Definition</b> Playing.h:115</div></div>
+<div class="ttc" id="aclassPlaying_html_af48ca7bb0f03c608845109a76e28ca9f"><div class="ttname"><a href="#af48ca7bb0f03c608845109a76e28ca9f">Playing::redInt</a></div><div class="ttdeci">int redInt</div><div class="ttdoc">Red color value as an integer.</div><div class="ttdef"><b>Definition</b> Playing.h:75</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#acfb6dd03503fdb31cd3689f9cd52c38a">already_got_data</a>, <a class="el" href="#ad3ebf8f89d94724bfe2974997a7a6ea4">blueInt</a>, <a class="el" href="#ab15a7745b108af629ee50453a99d87dd">blueVal</a>, <a class="el" href="#a411b802681aa29dbbb338172fec265ab">colours</a>, <a class="el" href="#a86da52f6c86801c7e34e09962228ec66">greenInt</a>, <a class="el" href="#ac271af5e2dd5f5c765522f97f8763239">greenVal</a>, <a class="el" href="#aec11c7adad14253b91214b8c7932df9d">iter</a>, <a class="el" href="Main_8cpp.html#a1f639e12141251259a876ef492f55df6">led</a>, <a class="el" href="#a405fe82242092a8dfabd90c21cd4ed62">maxTimingsNum</a>, <a class="el" href="#ad09488018f63425ea8b6168556da3f5d">playStartTime</a>, <a class="el" href="#af48ca7bb0f03c608845109a76e28ca9f">redInt</a>, <a class="el" href="#a07054319b1135b8aa10a9d234c93a617">redVal</a>, <a class="el" href="#a8b93e3901a9ec1f8e90ab4734060f02a">root</a>, <a class="el" href="#a678c92adbdb8d83782882803a7335ffd">timeline_keys</a>, and <a class="el" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>.</p>
 
@@ -656,14 +665,18 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlaying_a4f81c9a5de20fa2242e31c1ee27df7a3_icgraph.png" border="0" usemap="#aclassPlaying_a4f81c9a5de20fa2242e31c1ee27df7a3_icgraph" alt=""/></div>
 <map name="aclassPlaying_a4f81c9a5de20fa2242e31c1ee27df7a3_icgraph" id="aclassPlaying_a4f81c9a5de20fa2242e31c1ee27df7a3_icgraph">
-<area shape="rect" title="Processes the timeline data received from the server." alt="" coords="482,31,698,58"/>
-<area shape="rect" href="classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="272,5,434,33"/>
-<area shape="poly" title=" " alt="" coords="466,34,435,31,435,25,467,29"/>
-<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="111,31,224,58"/>
-<area shape="poly" title=" " alt="" coords="467,47,224,47,224,42,467,42"/>
-<area shape="poly" title=" " alt="" coords="257,35,225,39,224,34,256,30"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,31,63,58"/>
-<area shape="poly" title=" " alt="" coords="95,47,63,47,63,42,95,42"/>
+<area shape="rect" title="Processes the timeline data received from the server." alt="" coords="767,32,982,60"/>
+<area shape="rect" href="classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="556,7,719,34"/>
+<area shape="poly" title=" " alt="" coords="751,35,719,32,719,27,751,30"/>
+<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="395,32,508,60"/>
+<area shape="poly" title=" " alt="" coords="751,49,509,49,509,43,751,43"/>
+<area shape="poly" title=" " alt="" coords="541,36,509,41,508,36,540,31"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="380,49,348,49,348,43,380,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 
@@ -687,22 +700,22 @@ Here is the caller graph for this function:</div>
 <p>Sets up the playing process. </p>
 <p>This method sets up the playing process by initializing necessary components, loading timeline data from the disk, and processing it.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if setup is successful, false otherwise. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>{</div>
-<div class="line"><span class="lineno">  204</span>    digitalWrite(<a class="code hl_define" href="Main_8cpp.html#a1f639e12141251259a876ef492f55df6">led</a>, HIGH);</div>
-<div class="line"><span class="lineno">  205</span>    <span class="comment">// Simulate playing process</span></div>
-<div class="line"><span class="lineno">  206</span>    Serial.println(<span class="stringliteral">&quot;Playing...&quot;</span>);</div>
-<div class="line"><span class="lineno">  207</span>    <span class="comment">// Main function of the app here</span></div>
-<div class="line"><span class="lineno">  208</span>    String currentTimelineData = <a class="code hl_function" href="#aff641fcbb968459528336d2c3732b9bd">loadTimeline</a>();</div>
-<div class="line"><span class="lineno">  209</span>    Serial.print(<span class="stringliteral">&quot;Got timeline Data from disk: &quot;</span>);</div>
-<div class="line"><span class="lineno">  210</span>    Serial.println(currentTimelineData);</div>
-<div class="line"><span class="lineno">  211</span>    <a class="code hl_function" href="#a4f81c9a5de20fa2242e31c1ee27df7a3">processTimelineData</a>(currentTimelineData);</div>
-<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  213</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>{</div>
+<div class="line"><span class="lineno">  206</span>    digitalWrite(<a class="code hl_define" href="Main_8cpp.html#a1f639e12141251259a876ef492f55df6">led</a>, HIGH);</div>
+<div class="line"><span class="lineno">  207</span>    <span class="comment">// Simulate playing process</span></div>
+<div class="line"><span class="lineno">  208</span>    Serial.println(<span class="stringliteral">&quot;Playing...&quot;</span>);</div>
+<div class="line"><span class="lineno">  209</span>    <span class="comment">// Main function of the app here</span></div>
+<div class="line"><span class="lineno">  210</span>    String currentTimelineData = <a class="code hl_function" href="#aff641fcbb968459528336d2c3732b9bd">loadTimeline</a>();</div>
+<div class="line"><span class="lineno">  211</span>    Serial.print(<span class="stringliteral">&quot;Got timeline Data from disk: &quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>    Serial.println(currentTimelineData);</div>
+<div class="line"><span class="lineno">  213</span>    <a class="code hl_function" href="#a4f81c9a5de20fa2242e31c1ee27df7a3">processTimelineData</a>(currentTimelineData);</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  215</span>}</div>
 <div class="ttc" id="aclassPlaying_html_aff641fcbb968459528336d2c3732b9bd"><div class="ttname"><a href="#aff641fcbb968459528336d2c3732b9bd">Playing::loadTimeline</a></div><div class="ttdeci">String loadTimeline()</div><div class="ttdoc">Loads the timeline data from the disk.</div><div class="ttdef"><b>Definition</b> Playing.cpp:171</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Main_8cpp.html#a1f639e12141251259a876ef492f55df6">led</a>, <a class="el" href="#aff641fcbb968459528336d2c3732b9bd">loadTimeline()</a>, and <a class="el" href="#a4f81c9a5de20fa2242e31c1ee27df7a3">processTimelineData()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -721,9 +734,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlaying_a77b5d5cc77492aefa350c6df293f33ee_icgraph.png" border="0" usemap="#aclassPlaying_a77b5d5cc77492aefa350c6df293f33ee_icgraph" alt=""/></div>
 <map name="aclassPlaying_a77b5d5cc77492aefa350c6df293f33ee_icgraph" id="aclassPlaying_a77b5d5cc77492aefa350c6df293f33ee_icgraph">
-<area shape="rect" title="Sets up the playing process." alt="" coords="111,5,224,33"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,5,63,33"/>
-<area shape="poly" title=" " alt="" coords="95,22,63,22,63,17,95,17"/>
+<area shape="rect" title="Sets up the playing process." alt="" coords="395,32,508,60"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="380,49,348,49,348,43,380,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 
@@ -746,103 +763,103 @@ Here is the caller graph for this function:</div>
 
 <p>Uses the timeline data to change LED colors over time. </p>
 <p>This method uses the timeline data to change LED colors over time. It checks if it's time to change colors based on the timings in the timeline data. If it's time, it changes the colors according to the current index in the timeline data and moves to the next index. If the end of the timeline data is reached, it loops back to the beginning. </p>
-<div class="fragment"><div class="line"><span class="lineno">  299</span>{</div>
-<div class="line"><span class="lineno">  300</span>    <span class="comment">// Get the current time</span></div>
-<div class="line"><span class="lineno">  301</span>    <a class="code hl_variable" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a> = millis();</div>
-<div class="line"><span class="lineno">  302</span> </div>
-<div class="line"><span class="lineno">  303</span>    <span class="comment">// Check if it&#39;s time to change colors</span></div>
-<div class="line"><span class="lineno">  304</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a> - <a class="code hl_variable" href="#a331a5a3141242b0964e9d5b75cf05378">previousMillis</a> &gt;= <a class="code hl_variable" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>[<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>]) {</div>
-<div class="line"><span class="lineno">  305</span>        <span class="comment">// Update the previousMillis for the next iteration</span></div>
-<div class="line"><span class="lineno">  306</span>        <a class="code hl_variable" href="#a331a5a3141242b0964e9d5b75cf05378">previousMillis</a> = <a class="code hl_variable" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a>;</div>
-<div class="line"><span class="lineno">  307</span>        Serial.print(<a class="code hl_variable" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>[<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>]);</div>
-<div class="line"><span class="lineno">  308</span>        Serial.print(<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><span class="lineno">  309</span>        <span class="comment">// Change the colors based on the current index</span></div>
-<div class="line"><span class="lineno">  310</span>        <a class="code hl_function" href="#af3071d1fb83767f99774fd50ff65cc40">changeColours</a>(<a class="code hl_variable" href="#a411b802681aa29dbbb338172fec265ab">colours</a>[<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>]);</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>        <span class="comment">// Move to the next index</span></div>
-<div class="line"><span class="lineno">  313</span>        <a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>++;</div>
-<div class="line"><span class="lineno">  314</span> </div>
-<div class="line"><span class="lineno">  315</span>        <span class="comment">// If we reach the end of the array, loop back to the beginning</span></div>
-<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a> &gt;= <a class="code hl_variable" href="#a405fe82242092a8dfabd90c21cd4ed62">maxTimingsNum</a>) {</div>
-<div class="line"><span class="lineno">  317</span>            <a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a> = 0;</div>
-<div class="line"><span class="lineno">  318</span>        }</div>
-<div class="line"><span class="lineno">  319</span>    }</div>
-<div class="line"><span class="lineno">  320</span><span class="comment">//     Serial.println(&quot;play&quot;);</span></div>
-<div class="line"><span class="lineno">  321</span><span class="comment">//   // test:</span></div>
-<div class="line"><span class="lineno">  322</span><span class="comment">//   if (playing)</span></div>
-<div class="line"><span class="lineno">  323</span><span class="comment">//   {</span></div>
-<div class="line"><span class="lineno">  324</span><span class="comment">//     Serial.println(&quot;checking Timeline here&quot;);</span></div>
-<div class="line"><span class="lineno">  325</span><span class="comment">//     if (runNum &gt; maxTimingsNum - 2) // todo: ???</span></div>
-<div class="line"><span class="lineno">  326</span><span class="comment">//     {</span></div>
-<div class="line"><span class="lineno">  327</span><span class="comment">//       // Serial.println(&quot;initialising runNum and playStartTime&quot;);s</span></div>
-<div class="line"><span class="lineno">  328</span><span class="comment">//       runNum = 0;</span></div>
-<div class="line"><span class="lineno">  329</span><span class="comment">//       playStartTime = millis();</span></div>
-<div class="line"><span class="lineno">  330</span><span class="comment">//     }</span></div>
-<div class="line"><span class="lineno">  331</span><span class="comment">//     // another sanity check:</span></div>
-<div class="line"><span class="lineno">  332</span><span class="comment">//     if (timings[runNum] &gt; 0)</span></div>
-<div class="line"><span class="lineno">  333</span><span class="comment">//     {</span></div>
-<div class="line"><span class="lineno">  334</span><span class="comment">//       Serial.print(&quot;Checking timing for &quot;);</span></div>
-<div class="line"><span class="lineno">  335</span><span class="comment">//       Serial.print(timings[runNum]);</span></div>
-<div class="line"><span class="lineno">  336</span><span class="comment">//       currentMillis2 = millis() - playStartTime; // reset the clock! At the beginning of play this should be 0!</span></div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span><span class="comment">//       if (currentMillis2 &lt; timings[0])</span></div>
-<div class="line"><span class="lineno">  339</span><span class="comment">//       {</span></div>
-<div class="line"><span class="lineno">  340</span><span class="comment">//         Serial.print(&quot;&lt; &quot;);</span></div>
-<div class="line"><span class="lineno">  341</span><span class="comment">//         Serial.println(runNum);</span></div>
-<div class="line"><span class="lineno">  342</span><span class="comment">//         runNum++;</span></div>
-<div class="line"><span class="lineno">  343</span><span class="comment">//       }</span></div>
-<div class="line"><span class="lineno">  344</span><span class="comment">//       //   I think currently timings[] array must be in time order to work. If the last time is smaller than the previous nothing happens? todo: sort?</span></div>
-<div class="line"><span class="lineno">  345</span><span class="comment">//       else if (currentMillis2 &gt;= timings[runNum] &amp;&amp; currentMillis2 &lt;= timings[runNum + 1]) // todo: this omits the last signal..?</span></div>
-<div class="line"><span class="lineno">  346</span><span class="comment">//       {                                                                                    // saved signal</span></div>
-<div class="line"><span class="lineno">  347</span><span class="comment">//                                                                                            // Serial.print(&quot;== &quot;);</span></div>
-<div class="line"><span class="lineno">  348</span><span class="comment">//         Serial.print(runNum);</span></div>
-<div class="line"><span class="lineno">  349</span><span class="comment">//         Serial.print(&quot; of: &quot;);</span></div>
-<div class="line"><span class="lineno">  350</span><span class="comment">//         Serial.println(maxTimingsNum - 1);</span></div>
-<div class="line"><span class="lineno">  351</span><span class="comment">//         // sanity check:</span></div>
-<div class="line"><span class="lineno">  352</span><span class="comment">//         // if (colours[runNum] &lt; 13)</span></div>
-<div class="line"><span class="lineno">  353</span><span class="comment">//         // { // max is 22 otherwise it&#39;s a bogus signal</span></div>
-<div class="line"><span class="lineno">  354</span><span class="comment">//         signal = colours[runNum];</span></div>
-<div class="line"><span class="lineno">  355</span><span class="comment">//         // long time = timings[runNum];</span></div>
-<div class="line"><span class="lineno">  356</span><span class="comment">//         // flashy = flashes[runNum];</span></div>
-<div class="line"><span class="lineno">  357</span><span class="comment">//         Serial.print(&quot;colour is set to: &quot;);</span></div>
-<div class="line"><span class="lineno">  358</span><span class="comment">//         Serial.println(colours[runNum]);</span></div>
-<div class="line"><span class="lineno">  359</span><span class="comment">//         Serial.print(&quot;timings is set to: &quot;);</span></div>
-<div class="line"><span class="lineno">  360</span><span class="comment">//         Serial.println(timings[runNum]);</span></div>
-<div class="line"><span class="lineno">  361</span><span class="comment">//         changeColours(colours[runNum]);</span></div>
-<div class="line"><span class="lineno">  362</span><span class="comment">//         runNum++;</span></div>
-<div class="line"><span class="lineno">  363</span><span class="comment">//         // todo: deal with colours here - separate funciton</span></div>
-<div class="line"><span class="lineno">  364</span><span class="comment">//         // }</span></div>
-<div class="line"><span class="lineno">  365</span><span class="comment">//       }</span></div>
-<div class="line"><span class="lineno">  366</span><span class="comment">//       else if (currentMillis2 &gt;= timings[runNum + 1])</span></div>
-<div class="line"><span class="lineno">  367</span><span class="comment">//       {</span></div>
-<div class="line"><span class="lineno">  368</span><span class="comment">//         runNum = maxTimingsNum; // went over - trigger reset</span></div>
-<div class="line"><span class="lineno">  369</span><span class="comment">//       }</span></div>
-<div class="line"><span class="lineno">  370</span><span class="comment">//       else</span></div>
-<div class="line"><span class="lineno">  371</span><span class="comment">//       {</span></div>
-<div class="line"><span class="lineno">  372</span><span class="comment">//         // test code:</span></div>
-<div class="line"><span class="lineno">  373</span><span class="comment">//         //  Serial.println(&quot;what else? &quot;);</span></div>
-<div class="line"><span class="lineno">  374</span><span class="comment">//         //  Serial.println(&quot;runNum: &quot;);</span></div>
-<div class="line"><span class="lineno">  375</span><span class="comment">//         //  Serial.println(runNum);</span></div>
-<div class="line"><span class="lineno">  376</span><span class="comment">//         //  Serial.print(&quot;millis: &quot;);</span></div>
-<div class="line"><span class="lineno">  377</span><span class="comment">//         //  Serial.println(millis());</span></div>
-<div class="line"><span class="lineno">  378</span><span class="comment">//         //  Serial.print(&quot;currentMillis2: &quot;);</span></div>
-<div class="line"><span class="lineno">  379</span><span class="comment">//         //  Serial.println(currentMillis2);</span></div>
-<div class="line"><span class="lineno">  380</span><span class="comment">//         //  Serial.print(&quot;timings[runNum]: &quot;);</span></div>
-<div class="line"><span class="lineno">  381</span><span class="comment">//         //  Serial.println(timings[runNum]);</span></div>
-<div class="line"><span class="lineno">  382</span><span class="comment">//         //  Serial.print(&quot;timings[runNum + 1]: &quot;);</span></div>
-<div class="line"><span class="lineno">  383</span><span class="comment">//         //  Serial.println(timings[runNum + 1]);</span></div>
-<div class="line"><span class="lineno">  384</span> </div>
-<div class="line"><span class="lineno">  385</span><span class="comment">//         playStartTime = millis();</span></div>
-<div class="line"><span class="lineno">  386</span><span class="comment">//         Serial.println(&quot;resetting playStartTime&quot;);</span></div>
-<div class="line"><span class="lineno">  387</span><span class="comment">//         runNum++;</span></div>
-<div class="line"><span class="lineno">  388</span><span class="comment">//       }</span></div>
-<div class="line"><span class="lineno">  389</span><span class="comment">//     }</span></div>
-<div class="line"><span class="lineno">  390</span><span class="comment">//   }</span></div>
-<div class="line"><span class="lineno">  391</span>}</div>
-<div class="ttc" id="aclassPlaying_html_a331a5a3141242b0964e9d5b75cf05378"><div class="ttname"><a href="#a331a5a3141242b0964e9d5b75cf05378">Playing::previousMillis</a></div><div class="ttdeci">long previousMillis</div><div class="ttdoc">Timestamp of the last LED update.</div><div class="ttdef"><b>Definition</b> Playing.h:117</div></div>
-<div class="ttc" id="aclassPlaying_html_a47f21b77f592bf12b7d6d9ccdfde1b5d"><div class="ttname"><a href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">Playing::currentMillis2</a></div><div class="ttdeci">long currentMillis2</div><div class="ttdoc">Current timestamp.</div><div class="ttdef"><b>Definition</b> Playing.h:122</div></div>
-<div class="ttc" id="aclassPlaying_html_aae75ce7eb84c7b8aa296e1ed579460f6"><div class="ttname"><a href="#aae75ce7eb84c7b8aa296e1ed579460f6">Playing::currentIndex</a></div><div class="ttdeci">int currentIndex</div><div class="ttdoc">Current index in the timeline data arrays.</div><div class="ttdef"><b>Definition</b> Playing.h:137</div></div>
-<div class="ttc" id="aclassPlaying_html_af3071d1fb83767f99774fd50ff65cc40"><div class="ttname"><a href="#af3071d1fb83767f99774fd50ff65cc40">Playing::changeColours</a></div><div class="ttdeci">void changeColours(int choice)</div><div class="ttdoc">Changes the colors of the RGB LED based on the provided choice.</div><div class="ttdef"><b>Definition</b> Playing.cpp:231</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  301</span>{</div>
+<div class="line"><span class="lineno">  302</span>    <span class="comment">// Get the current time</span></div>
+<div class="line"><span class="lineno">  303</span>    <a class="code hl_variable" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a> = millis();</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>    <span class="comment">// Check if it&#39;s time to change colors</span></div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a> - <a class="code hl_variable" href="#a331a5a3141242b0964e9d5b75cf05378">previousMillis</a> &gt;= <a class="code hl_variable" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>[<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>]) {</div>
+<div class="line"><span class="lineno">  307</span>        <span class="comment">// Update the previousMillis for the next iteration</span></div>
+<div class="line"><span class="lineno">  308</span>        <a class="code hl_variable" href="#a331a5a3141242b0964e9d5b75cf05378">previousMillis</a> = <a class="code hl_variable" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a>;</div>
+<div class="line"><span class="lineno">  309</span>        Serial.print(<a class="code hl_variable" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>[<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>]);</div>
+<div class="line"><span class="lineno">  310</span>        Serial.print(<span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><span class="lineno">  311</span>        <span class="comment">// Change the colors based on the current index</span></div>
+<div class="line"><span class="lineno">  312</span>        <a class="code hl_function" href="#af3071d1fb83767f99774fd50ff65cc40">changeColours</a>(<a class="code hl_variable" href="#a411b802681aa29dbbb338172fec265ab">colours</a>[<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>]);</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>        <span class="comment">// Move to the next index</span></div>
+<div class="line"><span class="lineno">  315</span>        <a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>++;</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>        <span class="comment">// If we reach the end of the array, loop back to the beginning</span></div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a> &gt;= <a class="code hl_variable" href="#a405fe82242092a8dfabd90c21cd4ed62">maxTimingsNum</a>) {</div>
+<div class="line"><span class="lineno">  319</span>            <a class="code hl_variable" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a> = 0;</div>
+<div class="line"><span class="lineno">  320</span>        }</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
+<div class="line"><span class="lineno">  322</span><span class="comment">//     Serial.println(&quot;play&quot;);</span></div>
+<div class="line"><span class="lineno">  323</span><span class="comment">//   // test:</span></div>
+<div class="line"><span class="lineno">  324</span><span class="comment">//   if (playing)</span></div>
+<div class="line"><span class="lineno">  325</span><span class="comment">//   {</span></div>
+<div class="line"><span class="lineno">  326</span><span class="comment">//     Serial.println(&quot;checking Timeline here&quot;);</span></div>
+<div class="line"><span class="lineno">  327</span><span class="comment">//     if (runNum &gt; maxTimingsNum - 2) // todo: ???</span></div>
+<div class="line"><span class="lineno">  328</span><span class="comment">//     {</span></div>
+<div class="line"><span class="lineno">  329</span><span class="comment">//       // Serial.println(&quot;initialising runNum and playStartTime&quot;);s</span></div>
+<div class="line"><span class="lineno">  330</span><span class="comment">//       runNum = 0;</span></div>
+<div class="line"><span class="lineno">  331</span><span class="comment">//       playStartTime = millis();</span></div>
+<div class="line"><span class="lineno">  332</span><span class="comment">//     }</span></div>
+<div class="line"><span class="lineno">  333</span><span class="comment">//     // another sanity check:</span></div>
+<div class="line"><span class="lineno">  334</span><span class="comment">//     if (timings[runNum] &gt; 0)</span></div>
+<div class="line"><span class="lineno">  335</span><span class="comment">//     {</span></div>
+<div class="line"><span class="lineno">  336</span><span class="comment">//       Serial.print(&quot;Checking timing for &quot;);</span></div>
+<div class="line"><span class="lineno">  337</span><span class="comment">//       Serial.print(timings[runNum]);</span></div>
+<div class="line"><span class="lineno">  338</span><span class="comment">//       currentMillis2 = millis() - playStartTime; // reset the clock! At the beginning of play this should be 0!</span></div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span><span class="comment">//       if (currentMillis2 &lt; timings[0])</span></div>
+<div class="line"><span class="lineno">  341</span><span class="comment">//       {</span></div>
+<div class="line"><span class="lineno">  342</span><span class="comment">//         Serial.print(&quot;&lt; &quot;);</span></div>
+<div class="line"><span class="lineno">  343</span><span class="comment">//         Serial.println(runNum);</span></div>
+<div class="line"><span class="lineno">  344</span><span class="comment">//         runNum++;</span></div>
+<div class="line"><span class="lineno">  345</span><span class="comment">//       }</span></div>
+<div class="line"><span class="lineno">  346</span><span class="comment">//       //   I think currently timings[] array must be in time order to work. If the last time is smaller than the previous nothing happens? todo: sort?</span></div>
+<div class="line"><span class="lineno">  347</span><span class="comment">//       else if (currentMillis2 &gt;= timings[runNum] &amp;&amp; currentMillis2 &lt;= timings[runNum + 1]) // todo: this omits the last signal..?</span></div>
+<div class="line"><span class="lineno">  348</span><span class="comment">//       {                                                                                    // saved signal</span></div>
+<div class="line"><span class="lineno">  349</span><span class="comment">//                                                                                            // Serial.print(&quot;== &quot;);</span></div>
+<div class="line"><span class="lineno">  350</span><span class="comment">//         Serial.print(runNum);</span></div>
+<div class="line"><span class="lineno">  351</span><span class="comment">//         Serial.print(&quot; of: &quot;);</span></div>
+<div class="line"><span class="lineno">  352</span><span class="comment">//         Serial.println(maxTimingsNum - 1);</span></div>
+<div class="line"><span class="lineno">  353</span><span class="comment">//         // sanity check:</span></div>
+<div class="line"><span class="lineno">  354</span><span class="comment">//         // if (colours[runNum] &lt; 13)</span></div>
+<div class="line"><span class="lineno">  355</span><span class="comment">//         // { // max is 22 otherwise it&#39;s a bogus signal</span></div>
+<div class="line"><span class="lineno">  356</span><span class="comment">//         signal = colours[runNum];</span></div>
+<div class="line"><span class="lineno">  357</span><span class="comment">//         // long time = timings[runNum];</span></div>
+<div class="line"><span class="lineno">  358</span><span class="comment">//         // flashy = flashes[runNum];</span></div>
+<div class="line"><span class="lineno">  359</span><span class="comment">//         Serial.print(&quot;colour is set to: &quot;);</span></div>
+<div class="line"><span class="lineno">  360</span><span class="comment">//         Serial.println(colours[runNum]);</span></div>
+<div class="line"><span class="lineno">  361</span><span class="comment">//         Serial.print(&quot;timings is set to: &quot;);</span></div>
+<div class="line"><span class="lineno">  362</span><span class="comment">//         Serial.println(timings[runNum]);</span></div>
+<div class="line"><span class="lineno">  363</span><span class="comment">//         changeColours(colours[runNum]);</span></div>
+<div class="line"><span class="lineno">  364</span><span class="comment">//         runNum++;</span></div>
+<div class="line"><span class="lineno">  365</span><span class="comment">//         // todo: deal with colours here - separate funciton</span></div>
+<div class="line"><span class="lineno">  366</span><span class="comment">//         // }</span></div>
+<div class="line"><span class="lineno">  367</span><span class="comment">//       }</span></div>
+<div class="line"><span class="lineno">  368</span><span class="comment">//       else if (currentMillis2 &gt;= timings[runNum + 1])</span></div>
+<div class="line"><span class="lineno">  369</span><span class="comment">//       {</span></div>
+<div class="line"><span class="lineno">  370</span><span class="comment">//         runNum = maxTimingsNum; // went over - trigger reset</span></div>
+<div class="line"><span class="lineno">  371</span><span class="comment">//       }</span></div>
+<div class="line"><span class="lineno">  372</span><span class="comment">//       else</span></div>
+<div class="line"><span class="lineno">  373</span><span class="comment">//       {</span></div>
+<div class="line"><span class="lineno">  374</span><span class="comment">//         // test code:</span></div>
+<div class="line"><span class="lineno">  375</span><span class="comment">//         //  Serial.println(&quot;what else? &quot;);</span></div>
+<div class="line"><span class="lineno">  376</span><span class="comment">//         //  Serial.println(&quot;runNum: &quot;);</span></div>
+<div class="line"><span class="lineno">  377</span><span class="comment">//         //  Serial.println(runNum);</span></div>
+<div class="line"><span class="lineno">  378</span><span class="comment">//         //  Serial.print(&quot;millis: &quot;);</span></div>
+<div class="line"><span class="lineno">  379</span><span class="comment">//         //  Serial.println(millis());</span></div>
+<div class="line"><span class="lineno">  380</span><span class="comment">//         //  Serial.print(&quot;currentMillis2: &quot;);</span></div>
+<div class="line"><span class="lineno">  381</span><span class="comment">//         //  Serial.println(currentMillis2);</span></div>
+<div class="line"><span class="lineno">  382</span><span class="comment">//         //  Serial.print(&quot;timings[runNum]: &quot;);</span></div>
+<div class="line"><span class="lineno">  383</span><span class="comment">//         //  Serial.println(timings[runNum]);</span></div>
+<div class="line"><span class="lineno">  384</span><span class="comment">//         //  Serial.print(&quot;timings[runNum + 1]: &quot;);</span></div>
+<div class="line"><span class="lineno">  385</span><span class="comment">//         //  Serial.println(timings[runNum + 1]);</span></div>
+<div class="line"><span class="lineno">  386</span> </div>
+<div class="line"><span class="lineno">  387</span><span class="comment">//         playStartTime = millis();</span></div>
+<div class="line"><span class="lineno">  388</span><span class="comment">//         Serial.println(&quot;resetting playStartTime&quot;);</span></div>
+<div class="line"><span class="lineno">  389</span><span class="comment">//         runNum++;</span></div>
+<div class="line"><span class="lineno">  390</span><span class="comment">//       }</span></div>
+<div class="line"><span class="lineno">  391</span><span class="comment">//     }</span></div>
+<div class="line"><span class="lineno">  392</span><span class="comment">//   }</span></div>
+<div class="line"><span class="lineno">  393</span>}</div>
+<div class="ttc" id="aclassPlaying_html_a331a5a3141242b0964e9d5b75cf05378"><div class="ttname"><a href="#a331a5a3141242b0964e9d5b75cf05378">Playing::previousMillis</a></div><div class="ttdeci">long previousMillis</div><div class="ttdoc">Timestamp of the last LED update.</div><div class="ttdef"><b>Definition</b> Playing.h:125</div></div>
+<div class="ttc" id="aclassPlaying_html_a47f21b77f592bf12b7d6d9ccdfde1b5d"><div class="ttname"><a href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">Playing::currentMillis2</a></div><div class="ttdeci">long currentMillis2</div><div class="ttdoc">Current timestamp.</div><div class="ttdef"><b>Definition</b> Playing.h:130</div></div>
+<div class="ttc" id="aclassPlaying_html_aae75ce7eb84c7b8aa296e1ed579460f6"><div class="ttname"><a href="#aae75ce7eb84c7b8aa296e1ed579460f6">Playing::currentIndex</a></div><div class="ttdeci">int currentIndex</div><div class="ttdoc">Current index in the timeline data arrays.</div><div class="ttdef"><b>Definition</b> Playing.h:145</div></div>
+<div class="ttc" id="aclassPlaying_html_af3071d1fb83767f99774fd50ff65cc40"><div class="ttname"><a href="#af3071d1fb83767f99774fd50ff65cc40">Playing::changeColours</a></div><div class="ttdeci">void changeColours(int choice)</div><div class="ttdoc">Changes the colors of the RGB LED based on the provided choice.</div><div class="ttdef"><b>Definition</b> Playing.cpp:233</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#af3071d1fb83767f99774fd50ff65cc40">changeColours()</a>, <a class="el" href="#a411b802681aa29dbbb338172fec265ab">colours</a>, <a class="el" href="#aae75ce7eb84c7b8aa296e1ed579460f6">currentIndex</a>, <a class="el" href="#a47f21b77f592bf12b7d6d9ccdfde1b5d">currentMillis2</a>, <a class="el" href="#a405fe82242092a8dfabd90c21cd4ed62">maxTimingsNum</a>, <a class="el" href="#a331a5a3141242b0964e9d5b75cf05378">previousMillis</a>, and <a class="el" href="#a5001bdfc4a4c43c9fc86ebc5bcc5c93e">timings</a>.</p>
 
@@ -937,7 +954,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String Playing::timelineFilePath</td>
+          <td class="memname">String Playing::timelineFilePath = &quot;/timeline&quot; + <a class="el" href="#ada3287f449fb707485dd7e9a940a6f9e">timelineNumber</a> + &quot;.txt&quot;</td>
         </tr>
       </table>
   </td>
@@ -951,6 +968,31 @@ Here is the caller graph for this function:</div>
 <p>This variable stores the file path of the timeline data file. </p>
 
 <p class="reference">Referenced by <a class="el" href="#aff641fcbb968459528336d2c3732b9bd">loadTimeline()</a>.</p>
+
+</div>
+</div>
+<a id="ada3287f449fb707485dd7e9a940a6f9e" name="ada3287f449fb707485dd7e9a940a6f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3287f449fb707485dd7e9a940a6f9e">&#9670;&#160;</a></span>timelineNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Playing::timelineNumber = &quot;0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Variable to use int tinelineFilePath. </p>
+<p>This variable is a number which allows mulitple timelines to be stored in sequence. </p>
 
 </div>
 </div>

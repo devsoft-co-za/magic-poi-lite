@@ -227,7 +227,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>gotToken</b> = fal
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#a3c713b06843f131dc88a2a09867fa3a2">client</a>, <a class="el" href="#abc5cb703e43664c5a3ed6bfe23ad3d55">gotToken</a>, <a class="el" href="#a7a851cf9bcfc0010ecf0d10626312d6f">saveJWTTokenToFile()</a>, and <a class="el" href="#ac16bef3e75e3c1e3458540af65b3689d">token</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -243,9 +243,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAuthentication_aeb33404cd51828edf0db0cdce3c38b32_icgraph.png" border="0" usemap="#aclassAuthentication_aeb33404cd51828edf0db0cdce3c38b32_icgraph" alt=""/></div>
 <map name="aclassAuthentication_aeb33404cd51828edf0db0cdce3c38b32_icgraph" id="aclassAuthentication_aeb33404cd51828edf0db0cdce3c38b32_icgraph">
-<area shape="rect" title="Authenticates the client with the server." alt="" coords="111,5,317,33"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,5,63,33"/>
-<area shape="poly" title=" " alt="" coords="95,22,63,22,63,17,95,17"/>
+<area shape="rect" title="Authenticates the client with the server." alt="" coords="395,32,601,60"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="379,49,347,49,347,43,379,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 
@@ -292,7 +296,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="#abc5cb703e43664c5a3ed6bfe23ad3d55">gotToken</a>, <a class="el" href="#ac67cb64472ed5e95794d07ce9f5e1b86">readJWTTokenFromFile()</a>, and <a class="el" href="#ac16bef3e75e3c1e3458540af65b3689d">token</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -308,9 +312,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAuthentication_a6e13c5fb0a17675cbe2bf781111cf54d_icgraph.png" border="0" usemap="#aclassAuthentication_a6e13c5fb0a17675cbe2bf781111cf54d_icgraph" alt=""/></div>
 <map name="aclassAuthentication_a6e13c5fb0a17675cbe2bf781111cf54d_icgraph" id="aclassAuthentication_a6e13c5fb0a17675cbe2bf781111cf54d_icgraph">
-<area shape="rect" title="Checks for a saved JWT token and loads it if available." alt="" coords="111,5,313,50"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,14,63,42"/>
-<area shape="poly" title=" " alt="" coords="95,30,63,30,63,25,95,25"/>
+<area shape="rect" title="Checks for a saved JWT token and loads it if available." alt="" coords="395,24,597,68"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="379,49,347,49,347,43,379,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 
@@ -375,13 +383,17 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAuthentication_ac67cb64472ed5e95794d07ce9f5e1b86_icgraph.png" border="0" usemap="#aclassAuthentication_ac67cb64472ed5e95794d07ce9f5e1b86_icgraph" alt=""/></div>
 <map name="aclassAuthentication_ac67cb64472ed5e95794d07ce9f5e1b86_icgraph" id="aclassAuthentication_ac67cb64472ed5e95794d07ce9f5e1b86_icgraph">
-<area shape="rect" title="Reads JWT token from a file stored on LittleFS." alt="" coords="361,36,576,81"/>
-<area shape="rect" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="111,5,313,50"/>
-<area shape="poly" title=" " alt="" coords="345,46,313,42,314,37,346,41"/>
-<area shape="rect" href="classLoading.html#a7634c001ec052e10c402e49f5be030db" title="Default constructor for Loading class." alt="" coords="146,74,278,102"/>
-<area shape="poly" title=" " alt="" coords="346,75,278,83,278,78,346,70"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,14,63,42"/>
-<area shape="poly" title=" " alt="" coords="95,30,63,30,63,25,95,25"/>
+<area shape="rect" title="Reads JWT token from a file stored on LittleFS." alt="" coords="645,54,861,99"/>
+<area shape="rect" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="395,24,597,68"/>
+<area shape="poly" title=" " alt="" coords="630,64,598,61,598,55,630,59"/>
+<area shape="rect" href="classLoading.html#a7634c001ec052e10c402e49f5be030db" title="Default constructor for Loading class." alt="" coords="431,92,562,120"/>
+<area shape="poly" title=" " alt="" coords="631,93,563,101,562,96,630,88"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="379,49,347,49,347,43,379,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 
@@ -439,11 +451,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAuthentication_a7a851cf9bcfc0010ecf0d10626312d6f_icgraph.png" border="0" usemap="#aclassAuthentication_a7a851cf9bcfc0010ecf0d10626312d6f_icgraph" alt=""/></div>
 <map name="aclassAuthentication_a7a851cf9bcfc0010ecf0d10626312d6f_icgraph" id="aclassAuthentication_a7a851cf9bcfc0010ecf0d10626312d6f_icgraph">
-<area shape="rect" title="Saves a JWT token to a file on LittleFS." alt="" coords="365,5,582,50"/>
-<area shape="rect" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="111,14,317,42"/>
-<area shape="poly" title=" " alt="" coords="349,30,317,30,317,25,349,25"/>
-<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,14,63,42"/>
-<area shape="poly" title=" " alt="" coords="95,30,63,30,63,25,95,25"/>
+<area shape="rect" title="Saves a JWT token to a file on LittleFS." alt="" coords="649,24,867,68"/>
+<area shape="rect" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="395,32,601,60"/>
+<area shape="poly" title=" " alt="" coords="634,49,602,49,602,43,634,43"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" title=" " alt="" coords="379,49,347,49,347,43,379,43"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>
 </div>
 

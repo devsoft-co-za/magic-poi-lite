@@ -1,0 +1,7 @@
+<map id="handleAuthenticationAndLoading" name="handleAuthenticationAndLoading">
+<area shape="rect" id="Node000001" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="rect" id="Node000002" href="$Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" id="Node000003" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
+</map>

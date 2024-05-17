@@ -1,7 +1,11 @@
 <map id="Authentication::saveJWTTokenToFile" name="Authentication::saveJWTTokenToFile">
-<area shape="rect" id="Node000001" title="Saves a JWT token to a file on LittleFS." alt="" coords="365,5,582,50"/>
-<area shape="rect" id="Node000002" href="$classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="111,14,317,42"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="349,30,317,30,317,25,349,25"/>
-<area shape="rect" id="Node000003" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,14,63,42"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,30,63,30,63,25,95,25"/>
+<area shape="rect" id="Node000001" title="Saves a JWT token to a file on LittleFS." alt="" coords="649,24,867,68"/>
+<area shape="rect" id="Node000002" href="$classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="395,32,601,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="634,49,602,49,602,43,634,43"/>
+<area shape="rect" id="Node000003" href="$Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="379,49,347,49,347,43,379,43"/>
+<area shape="rect" id="Node000004" href="$Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" id="Node000005" href="$Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
 </map>

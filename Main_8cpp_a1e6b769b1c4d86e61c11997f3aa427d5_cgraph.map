@@ -1,0 +1,26 @@
+<map id="handleAuthenticationAndLoading" name="handleAuthenticationAndLoading">
+<area shape="rect" id="Node000001" title="Handles authentication and loading of timeline data." alt="" coords="5,114,242,142"/>
+<area shape="rect" id="Node000002" href="$classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="290,19,496,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,111,289,60,322,49,324,54,291,65,160,116"/>
+<area shape="rect" id="Node000004" href="$classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="292,75,494,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,112,276,108,276,113,242,117"/>
+<area shape="rect" id="Node000006" href="$classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="339,143,447,171"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="242,138,323,147,323,152,242,143"/>
+<area shape="rect" id="Node000010" href="$classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="336,247,450,275"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="155,140,350,237,348,242,152,144"/>
+<area shape="rect" id="Node000003" href="$classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="544,5,761,50"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="496,28,528,28,528,33,497,34"/>
+<area shape="rect" id="Node000005" href="$classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="545,75,760,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="494,94,529,94,529,100,494,100"/>
+<area shape="rect" id="Node000007" href="$classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="574,143,732,171"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="447,154,558,154,558,160,447,160"/>
+<area shape="rect" id="Node000009" href="$classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="548,195,758,223"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="448,165,566,189,565,194,447,170"/>
+<area shape="rect" id="Node000008" href="$classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="833,143,1001,171"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="732,154,817,154,817,160,732,160"/>
+<area shape="rect" id="Node000011" href="$classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="572,247,734,275"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="450,258,556,258,556,264,450,264"/>
+<area shape="rect" id="Node000012" href="$classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="809,273,1025,300"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="450,270,544,284,673,290,794,289,794,294,673,295,544,289,450,275"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="735,266,795,272,794,277,734,271"/>
+</map>

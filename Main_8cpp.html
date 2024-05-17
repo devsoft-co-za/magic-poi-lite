@@ -136,6 +136,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1d57c55f1d937f833544c63673444c32" id="r_a1d57c55f1d937f833544c63673444c32"><td class="memItemLeft" align="right" valign="top">void ICACHE_RAM_ATTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d57c55f1d937f833544c63673444c32">handleUpdateInterrupt</a> ()</td></tr>
+<tr class="memdesc:a1d57c55f1d937f833544c63673444c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt service routine for handling update button press.  <br /></td></tr>
+<tr class="separator:a1d57c55f1d937f833544c63673444c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6b769b1c4d86e61c11997f3aa427d5" id="r_a1e6b769b1c4d86e61c11997f3aa427d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading</a> ()</td></tr>
+<tr class="memdesc:a1e6b769b1c4d86e61c11997f3aa427d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles authentication and loading of timeline data.  <br /></td></tr>
+<tr class="separator:a1e6b769b1c4d86e61c11997f3aa427d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
 <tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the system including WiFi connection, authentication, and loading and playing timeline data.  <br /></td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,13 +169,22 @@ Variables</h2></td></tr>
 <tr class="memitem:a2a37a0731c2f8691dd9e3abf460fd1f9" id="r_a2a37a0731c2f8691dd9e3abf460fd1f9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a> = D7</td></tr>
 <tr class="memdesc:a2a37a0731c2f8691dd9e3abf460fd1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin number for the red LED.  <br /></td></tr>
 <tr class="separator:a2a37a0731c2f8691dd9e3abf460fd1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9490822cc5d16cf060482ed1283fa6" id="r_a4c9490822cc5d16cf060482ed1283fa6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c9490822cc5d16cf060482ed1283fa6">btnUpdatePin</a> = D1</td></tr>
+<tr class="memdesc:a4c9490822cc5d16cf060482ed1283fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin number for the update Button.  <br /></td></tr>
+<tr class="separator:a4c9490822cc5d16cf060482ed1283fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7db47645487553b13af007bc99d9de" id="r_a4c7db47645487553b13af007bc99d9de"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c7db47645487553b13af007bc99d9de">btnStartPin</a> = D2</td></tr>
+<tr class="memdesc:a4c7db47645487553b13af007bc99d9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin number for the start Button.  <br /></td></tr>
+<tr class="separator:a4c7db47645487553b13af007bc99d9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17dc5624a7578d8675ef9fed1b260754" id="r_a17dc5624a7578d8675ef9fed1b260754"><td class="memItemLeft" align="right" valign="top">ESP8266WiFiMulti&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a></td></tr>
 <tr class="memdesc:a17dc5624a7578d8675ef9fed1b260754"><td class="mdescLeft">&#160;</td><td class="mdescRight">WiFi multi-client manager for ESP8266.  <br /></td></tr>
 <tr class="separator:a17dc5624a7578d8675ef9fed1b260754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379fa2cfe87e15952a63e9b81be9b5ab" id="r_a379fa2cfe87e15952a63e9b81be9b5ab"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a> = false</td></tr>
+<tr class="memdesc:a379fa2cfe87e15952a63e9b81be9b5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating whether an update is requested.  <br /></td></tr>
+<tr class="separator:a379fa2cfe87e15952a63e9b81be9b5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main program file. </p>
-<p>The main program - includes <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data.">setup()</a> and <a class="el" href="#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program.">loop()</a>. Currently set to connect to Magic Poi Lite API on startup and fetch the current timeline. Then display the timeline on RGB LED's according to timings. </p>
+<p>The main program - includes <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data.">setup()</a> and <a class="el" href="#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program.">loop()</a>. Currently set to connect to Magic Poi Lite API on startup and fetch the current timeline. Then display the timeline on RGB LEDs according to timings. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1f639e12141251259a876ef492f55df6" name="a1f639e12141251259a876ef492f55df6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f639e12141251259a876ef492f55df6">&#9670;&#160;</a></span>led</h2>
@@ -191,6 +206,156 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a1e6b769b1c4d86e61c11997f3aa427d5" name="a1e6b769b1c4d86e61c11997f3aa427d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e6b769b1c4d86e61c11997f3aa427d5">&#9670;&#160;</a></span>handleAuthenticationAndLoading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleAuthenticationAndLoading </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles authentication and loading of timeline data. </p>
+<p>This function performs the process of checking for saved authentication tokens, handling authentication, and loading timeline data. It prints messages to indicate the status of these operations. </p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                      {</div>
+<div class="line"><span class="lineno">  115</span>  Serial.println(<span class="stringliteral">&quot;Setup: Connection &amp; Authentication&quot;</span>);</div>
+<div class="line"><span class="lineno">  116</span>  </div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordtype">bool</span> isAuthenticated = <a class="code hl_variable" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>.<a class="code hl_function" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">checkSavedToken</a>();</div>
+<div class="line"><span class="lineno">  118</span>  isAuthenticated = <span class="keyword">false</span>; <span class="comment">// test re-auth - todo: tie this to a button press - todo: not working without this?</span></div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (isAuthenticated) {</div>
+<div class="line"><span class="lineno">  121</span>    Serial.println(<span class="stringliteral">&quot;Authentication found. Using saved.&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa01bcf11e5df59192e7f3302b0242552">loading</a>.<a class="code hl_function" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">load</a>()) {</div>
+<div class="line"><span class="lineno">  123</span>      Serial.println(<span class="stringliteral">&quot;LOADED AND SAVED TIMELINE SUCCESSFULLY&quot;</span>);</div>
+<div class="line"><span class="lineno">  124</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.<a class="code hl_function" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">setup</a>()) {</div>
+<div class="line"><span class="lineno">  125</span>        Serial.println(<span class="stringliteral">&quot;SETUP COMPLETE&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>      }</div>
+<div class="line"><span class="lineno">  127</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  128</span>      Serial.println(<span class="stringliteral">&quot;LOADING AND SAVING TIMELINE UNSUCCESSFUL&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  130</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordtype">bool</span> isAuthenticating = <a class="code hl_variable" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>.<a class="code hl_function" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32">authenticate</a>();</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">if</span> (isAuthenticating) {</div>
+<div class="line"><span class="lineno">  133</span>      isAuthenticated = <a class="code hl_variable" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>.<a class="code hl_function" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">checkSavedToken</a>();</div>
+<div class="line"><span class="lineno">  134</span>      <span class="keywordflow">if</span> (isAuthenticated) {</div>
+<div class="line"><span class="lineno">  135</span>        Serial.println(<span class="stringliteral">&quot;Authenticated using login success. Should be saved now, using..&quot;</span>);</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa01bcf11e5df59192e7f3302b0242552">loading</a>.<a class="code hl_function" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">load</a>()) {</div>
+<div class="line"><span class="lineno">  137</span>          Serial.println(<span class="stringliteral">&quot;LOADED AND SAVED TIMELINE SUCCESSFULLY&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.<a class="code hl_function" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">setup</a>()) {</div>
+<div class="line"><span class="lineno">  139</span>            Serial.println(<span class="stringliteral">&quot;SETUP COMPLETE&quot;</span>);</div>
+<div class="line"><span class="lineno">  140</span>          }</div>
+<div class="line"><span class="lineno">  141</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  142</span>          Serial.println(<span class="stringliteral">&quot;LOADING AND SAVING TIMELINE UNSUCCESSFUL&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+<div class="line"><span class="lineno">  144</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  145</span>        Serial.println(<span class="stringliteral">&quot;Auth check saved JWT after password login failed&quot;</span>);</div>
+<div class="line"><span class="lineno">  146</span>      }</div>
+<div class="line"><span class="lineno">  147</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  148</span>      Serial.println(<span class="stringliteral">&quot;Failed to authenticate with password&quot;</span>);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>  }</div>
+<div class="line"><span class="lineno">  151</span>}</div>
+<div class="ttc" id="aMain_8cpp_html_a244868866c8dc3e5d6170358b29b7ddd"><div class="ttname"><a href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a></div><div class="ttdeci">Playing playing</div><div class="ttdoc">Instance of the Playing class.</div><div class="ttdef"><b>Definition</b> Main.cpp:39</div></div>
+<div class="ttc" id="aMain_8cpp_html_aa01bcf11e5df59192e7f3302b0242552"><div class="ttname"><a href="#aa01bcf11e5df59192e7f3302b0242552">loading</a></div><div class="ttdeci">Loading loading</div><div class="ttdoc">Instance of the Loading class.</div><div class="ttdef"><b>Definition</b> Main.cpp:32</div></div>
+<div class="ttc" id="aMain_8cpp_html_ad4297dc9f5dee3aca1982088ebab51e3"><div class="ttname"><a href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a></div><div class="ttdeci">Authentication authentication</div><div class="ttdoc">Instance of the Authentication class.</div><div class="ttdef"><b>Definition</b> Main.cpp:25</div></div>
+<div class="ttc" id="aclassAuthentication_html_a6e13c5fb0a17675cbe2bf781111cf54d"><div class="ttname"><a href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">Authentication::checkSavedToken</a></div><div class="ttdeci">bool checkSavedToken()</div><div class="ttdoc">Checks for a saved JWT token and loads it if available.</div><div class="ttdef"><b>Definition</b> Authentication.cpp:177</div></div>
+<div class="ttc" id="aclassAuthentication_html_aeb33404cd51828edf0db0cdce3c38b32"><div class="ttname"><a href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32">Authentication::authenticate</a></div><div class="ttdeci">bool authenticate()</div><div class="ttdoc">Authenticates the client with the server.</div><div class="ttdef"><b>Definition</b> Authentication.cpp:117</div></div>
+<div class="ttc" id="aclassLoading_html_a4381fcc49446bf5dbee9c3157c689676"><div class="ttname"><a href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">Loading::load</a></div><div class="ttdeci">bool load()</div><div class="ttdoc">Loads data required for the application.</div><div class="ttdef"><b>Definition</b> Loading.cpp:181</div></div>
+<div class="ttc" id="aclassPlaying_html_a77b5d5cc77492aefa350c6df293f33ee"><div class="ttname"><a href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">Playing::setup</a></div><div class="ttdeci">bool setup()</div><div class="ttdoc">Sets up the playing process.</div><div class="ttdef"><b>Definition</b> Playing.cpp:204</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32">Authentication::authenticate()</a>, <a class="el" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>, <a class="el" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">Authentication::checkSavedToken()</a>, <a class="el" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">Loading::load()</a>, <a class="el" href="#aa01bcf11e5df59192e7f3302b0242552">loading</a>, <a class="el" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>, and <a class="el" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">Playing::setup()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop()</a>, and <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="Main_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_cgraph.png" border="0" usemap="#aMain_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_cgraph" alt=""/></div>
+<map name="aMain_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_cgraph" id="aMain_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_cgraph">
+<area shape="rect" title="Handles authentication and loading of timeline data." alt="" coords="5,114,242,142"/>
+<area shape="rect" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="290,19,496,47"/>
+<area shape="poly" title=" " alt="" coords="158,111,289,60,322,49,324,54,291,65,160,116"/>
+<area shape="rect" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="292,75,494,119"/>
+<area shape="poly" title=" " alt="" coords="242,112,276,108,276,113,242,117"/>
+<area shape="rect" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="339,143,447,171"/>
+<area shape="poly" title=" " alt="" coords="242,138,323,147,323,152,242,143"/>
+<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="336,247,450,275"/>
+<area shape="poly" title=" " alt="" coords="155,140,350,237,348,242,152,144"/>
+<area shape="rect" href="classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="544,5,761,50"/>
+<area shape="poly" title=" " alt="" coords="496,28,528,28,528,33,497,34"/>
+<area shape="rect" href="classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="545,75,760,119"/>
+<area shape="poly" title=" " alt="" coords="494,94,529,94,529,100,494,100"/>
+<area shape="rect" href="classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="574,143,732,171"/>
+<area shape="poly" title=" " alt="" coords="447,154,558,154,558,160,447,160"/>
+<area shape="rect" href="classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="548,195,758,223"/>
+<area shape="poly" title=" " alt="" coords="448,165,566,189,565,194,447,170"/>
+<area shape="rect" href="classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="833,143,1001,171"/>
+<area shape="poly" title=" " alt="" coords="732,154,817,154,817,160,732,160"/>
+<area shape="rect" href="classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="572,247,734,275"/>
+<area shape="poly" title=" " alt="" coords="450,258,556,258,556,264,450,264"/>
+<area shape="rect" href="classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="809,273,1025,300"/>
+<area shape="poly" title=" " alt="" coords="450,270,544,284,673,290,794,289,794,294,673,295,544,289,450,275"/>
+<area shape="poly" title=" " alt="" coords="735,266,795,272,794,277,734,271"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="Main_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_icgraph.png" border="0" usemap="#aMain_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_icgraph" alt=""/></div>
+<map name="aMain_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_icgraph" id="aMain_8cpp_a1e6b769b1c4d86e61c11997f3aa427d5_icgraph">
+<area shape="rect" title="Handles authentication and loading of timeline data." alt="" coords="111,32,347,60"/>
+<area shape="rect" href="Main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Main loop of the program." alt="" coords="9,5,59,33"/>
+<area shape="poly" title=" " alt="" coords="108,32,59,25,59,20,109,27"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,57,63,85"/>
+<area shape="poly" title=" " alt="" coords="103,65,63,70,63,65,103,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d57c55f1d937f833544c63673444c32" name="a1d57c55f1d937f833544c63673444c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d57c55f1d937f833544c63673444c32">&#9670;&#160;</a></span>handleUpdateInterrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ICACHE_RAM_ATTR handleUpdateInterrupt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt service routine for handling update button press. </p>
+<p>This function sets the updateRequested flag to true when the update button is pressed. </p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                             {</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_variable" href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
+<div class="ttc" id="aMain_8cpp_html_a379fa2cfe87e15952a63e9b81be9b5ab"><div class="ttname"><a href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a></div><div class="ttdeci">volatile bool updateRequested</div><div class="ttdoc">Flag indicating whether an update is requested.</div><div class="ttdef"><b>Definition</b> Main.cpp:96</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="Main_8cpp_a1d57c55f1d937f833544c63673444c32_icgraph.png" border="0" usemap="#aMain_8cpp_a1d57c55f1d937f833544c63673444c32_icgraph" alt=""/></div>
+<map name="aMain_8cpp_a1d57c55f1d937f833544c63673444c32_icgraph" id="aMain_8cpp_a1d57c55f1d937f833544c63673444c32_icgraph">
+<area shape="rect" title="Interrupt service routine for handling update button press." alt="" coords="111,5,279,33"/>
+<area shape="rect" href="Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,5,63,33"/>
+<area shape="poly" title=" " alt="" coords="95,22,63,22,63,17,95,17"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
 
@@ -207,29 +372,57 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Main loop of the program. </p>
-<p>This function is the main loop of the program. It repeatedly calls the play function to execute the playing process, which involves changing LED colors over time according to the timeline data. Additionally, it adds a delay of 5 seconds between each play iteration to control the timing of the LED color changes. </p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>{</div>
-<div class="line"><span class="lineno">  168</span>  <span class="comment">// Playing</span></div>
-<div class="line"><span class="lineno">  169</span>  <a class="code hl_variable" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.<a class="code hl_function" href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f">play</a>();</div>
-<div class="line"><span class="lineno">  170</span>  <span class="comment">// Add delay if needed</span></div>
-<div class="line"><span class="lineno">  171</span>  delay(5000); <span class="comment">// Example: Delay for 5 seconds between each play</span></div>
-<div class="line"><span class="lineno">  172</span>}</div>
-<div class="ttc" id="aMain_8cpp_html_a244868866c8dc3e5d6170358b29b7ddd"><div class="ttname"><a href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a></div><div class="ttdeci">Playing playing</div><div class="ttdoc">Instance of the Playing class.</div><div class="ttdef"><b>Definition</b> Main.cpp:40</div></div>
-<div class="ttc" id="aclassPlaying_html_a2d198fdbcde6de06036ed4186001548f"><div class="ttname"><a href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f">Playing::play</a></div><div class="ttdeci">void play()</div><div class="ttdoc">Plays the timeline data.</div><div class="ttdef"><b>Definition</b> Playing.cpp:400</div></div>
+<p>This function is the main loop of the program. It checks for update requests and calls <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data.">handleAuthenticationAndLoading()</a> if an update is requested. It also calls the play function to execute the playing process, which involves changing LED colors over time according to the timeline data. Additionally, it adds a delay of 5 seconds between each play iteration to control the timing of the LED color changes. </p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>            {</div>
+<div class="line"><span class="lineno">  201</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a>) {</div>
+<div class="line"><span class="lineno">  202</span>    <a class="code hl_variable" href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  203</span>    <a class="code hl_function" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading</a>();</div>
+<div class="line"><span class="lineno">  204</span>  }</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>  <a class="code hl_variable" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.<a class="code hl_function" href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f">play</a>();</div>
+<div class="line"><span class="lineno">  207</span>  delay(5000); <span class="comment">// Example: Delay for 5 seconds between each play</span></div>
+<div class="line"><span class="lineno">  208</span>}</div>
+<div class="ttc" id="aMain_8cpp_html_a1e6b769b1c4d86e61c11997f3aa427d5"><div class="ttname"><a href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading</a></div><div class="ttdeci">void handleAuthenticationAndLoading()</div><div class="ttdoc">Handles authentication and loading of timeline data.</div><div class="ttdef"><b>Definition</b> Main.cpp:114</div></div>
+<div class="ttc" id="aclassPlaying_html_a2d198fdbcde6de06036ed4186001548f"><div class="ttname"><a href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f">Playing::play</a></div><div class="ttdeci">void play()</div><div class="ttdoc">Plays the timeline data.</div><div class="ttdef"><b>Definition</b> Playing.cpp:402</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f">Playing::play()</a>, and <a class="el" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.</p>
+<p class="reference">References <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>, <a class="el" href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f">Playing::play()</a>, <a class="el" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>, and <a class="el" href="#a379fa2cfe87e15952a63e9b81be9b5ab">updateRequested</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.png" border="0" usemap="#aMain_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph" alt=""/></div>
 <map name="aMain_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph" id="aMain_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph">
-<area shape="rect" title="Main loop of the program." alt="" coords="5,5,55,33"/>
-<area shape="rect" href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f" title="Plays the timeline data." alt="" coords="103,5,208,33"/>
-<area shape="poly" title=" " alt="" coords="55,17,87,17,87,22,55,22"/>
-<area shape="rect" href="classPlaying.html#a5e24c92b5e869946d98abd178eff3061" title="Uses the timeline data to change LED colors over time." alt="" coords="256,5,444,33"/>
-<area shape="poly" title=" " alt="" coords="208,17,240,17,240,22,208,22"/>
-<area shape="rect" href="classPlaying.html#af3071d1fb83767f99774fd50ff65cc40" title="Changes the colors of the RGB LED based on the provided choice." alt="" coords="492,5,666,33"/>
-<area shape="poly" title=" " alt="" coords="445,17,477,17,477,22,445,22"/>
+<area shape="rect" title="Main loop of the program." alt="" coords="5,222,55,250"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="103,170,339,198"/>
+<area shape="poly" title=" " alt="" coords="54,227,152,200,153,205,56,232"/>
+<area shape="rect" href="classPlaying.html#a2d198fdbcde6de06036ed4186001548f" title="Plays the timeline data." alt="" coords="168,247,274,275"/>
+<area shape="poly" title=" " alt="" coords="56,236,153,249,152,255,55,242"/>
+<area shape="rect" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="387,26,593,54"/>
+<area shape="poly" title=" " alt="" coords="239,167,302,122,386,73,426,57,428,61,388,78,305,127,242,172"/>
+<area shape="rect" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="389,88,591,133"/>
+<area shape="poly" title=" " alt="" coords="274,167,390,135,391,140,276,172"/>
+<area shape="rect" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="436,170,544,198"/>
+<area shape="poly" title=" " alt="" coords="340,181,420,181,420,186,340,186"/>
+<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="434,247,547,275"/>
+<area shape="poly" title=" " alt="" coords="272,195,425,240,424,245,271,201"/>
+<area shape="rect" href="classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="641,5,859,50"/>
+<area shape="poly" title=" " alt="" coords="594,32,626,31,626,36,594,38"/>
+<area shape="rect" href="classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="642,75,858,119"/>
+<area shape="poly" title=" " alt="" coords="592,102,627,101,627,106,592,108"/>
+<area shape="rect" href="classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="671,143,829,171"/>
+<area shape="poly" title=" " alt="" coords="545,175,655,164,656,169,545,181"/>
+<area shape="rect" href="classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="645,195,855,223"/>
+<area shape="poly" title=" " alt="" coords="545,186,630,195,629,200,545,192"/>
+<area shape="rect" href="classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="930,143,1099,171"/>
+<area shape="poly" title=" " alt="" coords="829,154,914,154,914,160,829,160"/>
+<area shape="rect" href="classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="669,247,831,275"/>
+<area shape="poly" title=" " alt="" coords="547,258,654,258,654,264,547,264"/>
+<area shape="rect" href="classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="907,273,1122,300"/>
+<area shape="poly" title=" " alt="" coords="548,270,642,284,770,290,891,289,891,294,770,295,641,289,547,275"/>
+<area shape="poly" title=" " alt="" coords="832,266,892,272,891,277,831,271"/>
+<area shape="rect" href="classPlaying.html#a5e24c92b5e869946d98abd178eff3061" title="Uses the timeline data to change LED colors over time." alt="" coords="396,323,584,351"/>
+<area shape="poly" title=" " alt="" coords="274,273,424,316,423,321,272,278"/>
+<area shape="rect" href="classPlaying.html#af3071d1fb83767f99774fd50ff65cc40" title="Changes the colors of the RGB LED based on the provided choice." alt="" coords="663,349,837,376"/>
+<area shape="poly" title=" " alt="" coords="585,344,648,350,648,355,584,349"/>
 </map>
 </div>
 
@@ -251,119 +444,80 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Sets up the system including WiFi connection, authentication, and loading and playing timeline data. </p>
-<p>This function initializes the system by establishing a WiFi connection, checking for saved authentication tokens, and handling authentication processes. It loads timeline data from the disk and sets up the playing process accordingly. If authentication is successful and timeline data is loaded successfully, it completes the setup process and prints a success message. Otherwise, it prints error messages indicating the failure. </p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
-<div class="line"><span class="lineno">   89</span>  Serial.begin(115200);</div>
-<div class="line"><span class="lineno">   90</span>  pinMode(<a class="code hl_define" href="#a1f639e12141251259a876ef492f55df6">led</a>, OUTPUT);</div>
-<div class="line"><span class="lineno">   91</span>  digitalWrite(<a class="code hl_define" href="#a1f639e12141251259a876ef492f55df6">led</a>, HIGH); <span class="comment">// HIGH is off for D1 mini</span></div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>  <span class="comment">// set the digital pins as outputs</span></div>
-<div class="line"><span class="lineno">   94</span>  pinMode(<a class="code hl_variable" href="#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, OUTPUT);</div>
-<div class="line"><span class="lineno">   95</span>  pinMode(<a class="code hl_variable" href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, OUTPUT);</div>
-<div class="line"><span class="lineno">   96</span>  pinMode(<a class="code hl_variable" href="#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, OUTPUT);</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>  <span class="comment">// WiFi connection: </span></div>
-<div class="line"><span class="lineno">   99</span>  WiFi.mode(WIFI_STA);</div>
-<div class="line"><span class="lineno">  100</span>  <a class="code hl_variable" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a>.addAP(WIFI_SSID, WIFI_PASSWORD);</div>
-<div class="line"><span class="lineno">  101</span>  Serial.println(<span class="stringliteral">&quot;Connecting to WiFi&quot;</span>);</div>
-<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a>.run() != WL_CONNECTED)</div>
-<div class="line"><span class="lineno">  103</span>  {</div>
-<div class="line"><span class="lineno">  104</span>    Serial.print(<span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><span class="lineno">  105</span>    delay(500);</div>
-<div class="line"><span class="lineno">  106</span>  }</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>  Serial.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  109</span>  Serial.println(<span class="stringliteral">&quot;WiFi connected&quot;</span>);</div>
-<div class="line"><span class="lineno">  110</span>  Serial.println(<span class="stringliteral">&quot;IP address: &quot;</span>);</div>
-<div class="line"><span class="lineno">  111</span>  Serial.println(WiFi.localIP());</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  <span class="comment">// Setup: Connection &amp; Authentication</span></div>
-<div class="line"><span class="lineno">  114</span>  Serial.println(<span class="stringliteral">&quot;Setup: Connection &amp; Authentication&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>  <span class="comment">// Connecting to WiFi and authenticating</span></div>
-<div class="line"><span class="lineno">  117</span>  <span class="keywordtype">bool</span> isAuthenticated = <a class="code hl_variable" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>.<a class="code hl_function" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">checkSavedToken</a>();</div>
-<div class="line"><span class="lineno">  118</span>  isAuthenticated = <span class="keyword">false</span>; <span class="comment">//test re-auth - todo: tie this to a button press</span></div>
-<div class="line"><span class="lineno">  119</span>  <span class="comment">//Check disk for saved JWT auth and use it:</span></div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (isAuthenticated)</div>
-<div class="line"><span class="lineno">  121</span>  {</div>
-<div class="line"><span class="lineno">  122</span>    Serial.println(<span class="stringliteral">&quot;Authentication found. Using saved.&quot;</span>);</div>
-<div class="line"><span class="lineno">  123</span>    <span class="comment">// Loading data</span></div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aa01bcf11e5df59192e7f3302b0242552">loading</a>.<a class="code hl_function" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">load</a>()){</div>
-<div class="line"><span class="lineno">  125</span>          Serial.println(<span class="stringliteral">&quot;LOADED AND SAVED TIMELINE SUCCESSFULLY&quot;</span>);</div>
-<div class="line"><span class="lineno">  126</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.<a class="code hl_function" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">setup</a>()){</div>
-<div class="line"><span class="lineno">  127</span>            Serial.println(<span class="stringliteral">&quot;SETUP COMPLETE&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>          }</div>
-<div class="line"><span class="lineno">  129</span>        } <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  130</span>          Serial.println(<span class="stringliteral">&quot;LOADING AND SAVING TIMELINE UNSUCCESSFUL&quot;</span>);</div>
-<div class="line"><span class="lineno">  131</span>        } <span class="comment">//todo: loading needs to tell us if authentication is unsuccessful, so we can try password auth?</span></div>
-<div class="line"><span class="lineno">  132</span>  }</div>
-<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">else</span> <span class="comment">//no saved JWT found: </span></div>
-<div class="line"><span class="lineno">  134</span>  {</div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordtype">bool</span> isAuthenticating = <a class="code hl_variable" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>.<a class="code hl_function" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32">authenticate</a>();</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span>(isAuthenticating){ <span class="comment">//auth success</span></div>
-<div class="line"><span class="lineno">  137</span>      isAuthenticated = <a class="code hl_variable" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>.<a class="code hl_function" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">checkSavedToken</a>(); <span class="comment">//check again for testing, just for testing?</span></div>
-<div class="line"><span class="lineno">  138</span>      <span class="keywordflow">if</span>(isAuthenticated){ </div>
-<div class="line"><span class="lineno">  139</span>        Serial.println(<span class="stringliteral">&quot;Authenticated using login success. Should be saved now, using..&quot;</span>);</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="#aa01bcf11e5df59192e7f3302b0242552">loading</a>.<a class="code hl_function" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">load</a>()){</div>
-<div class="line"><span class="lineno">  141</span>          Serial.println(<span class="stringliteral">&quot;LOADED AND SAVED TIMELINE SUCCESSFULLY&quot;</span>);</div>
-<div class="line"><span class="lineno">  142</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>.<a class="code hl_function" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">setup</a>()){</div>
-<div class="line"><span class="lineno">  143</span>            Serial.println(<span class="stringliteral">&quot;SETUP COMPLETE&quot;</span>);</div>
-<div class="line"><span class="lineno">  144</span>          }</div>
-<div class="line"><span class="lineno">  145</span>        } <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  146</span>          Serial.println(<span class="stringliteral">&quot;LOADING AND SAVING TIMELINE UNSUCCESSFUL&quot;</span>);</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="line"><span class="lineno">  148</span>      } <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  149</span>      {</div>
-<div class="line"><span class="lineno">  150</span>        Serial.println(<span class="stringliteral">&quot;Auth check saved JWT after password login failed&quot;</span>);</div>
-<div class="line"><span class="lineno">  151</span>      }</div>
-<div class="line"><span class="lineno">  152</span>    } <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  153</span>    {</div>
-<div class="line"><span class="lineno">  154</span>      Serial.println(<span class="stringliteral">&quot;Failed to authenticate with password&quot;</span>);</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="line"><span class="lineno">  156</span>  }</div>
-<div class="line"><span class="lineno">  157</span>}</div>
-<div class="ttc" id="aMain_8cpp_html_a12e0822e230092cca844cd048a9d6cd6"><div class="ttname"><a href="#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a></div><div class="ttdeci">const int greenLEDPin</div><div class="ttdoc">Pin number for the green LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:61</div></div>
-<div class="ttc" id="aMain_8cpp_html_a17dc5624a7578d8675ef9fed1b260754"><div class="ttname"><a href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a></div><div class="ttdeci">ESP8266WiFiMulti WiFiMulti</div><div class="ttdoc">WiFi multi-client manager for ESP8266.</div><div class="ttdef"><b>Definition</b> Main.cpp:75</div></div>
-<div class="ttc" id="aMain_8cpp_html_a1f639e12141251259a876ef492f55df6"><div class="ttname"><a href="#a1f639e12141251259a876ef492f55df6">led</a></div><div class="ttdeci">#define led</div><div class="ttdoc">Pin number for the built-in LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:47</div></div>
-<div class="ttc" id="aMain_8cpp_html_a2a37a0731c2f8691dd9e3abf460fd1f9"><div class="ttname"><a href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a></div><div class="ttdeci">const int redLEDPin</div><div class="ttdoc">Pin number for the red LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:68</div></div>
-<div class="ttc" id="aMain_8cpp_html_aa01bcf11e5df59192e7f3302b0242552"><div class="ttname"><a href="#aa01bcf11e5df59192e7f3302b0242552">loading</a></div><div class="ttdeci">Loading loading</div><div class="ttdoc">Instance of the Loading class.</div><div class="ttdef"><b>Definition</b> Main.cpp:33</div></div>
-<div class="ttc" id="aMain_8cpp_html_abd394e3bd0c2ba4048dea776c6557cd1"><div class="ttname"><a href="#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a></div><div class="ttdeci">const int blueLEDPin</div><div class="ttdoc">Pin number for the blue LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:54</div></div>
-<div class="ttc" id="aMain_8cpp_html_ad4297dc9f5dee3aca1982088ebab51e3"><div class="ttname"><a href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a></div><div class="ttdeci">Authentication authentication</div><div class="ttdoc">Instance of the Authentication class.</div><div class="ttdef"><b>Definition</b> Main.cpp:26</div></div>
-<div class="ttc" id="aclassAuthentication_html_a6e13c5fb0a17675cbe2bf781111cf54d"><div class="ttname"><a href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">Authentication::checkSavedToken</a></div><div class="ttdeci">bool checkSavedToken()</div><div class="ttdoc">Checks for a saved JWT token and loads it if available.</div><div class="ttdef"><b>Definition</b> Authentication.cpp:177</div></div>
-<div class="ttc" id="aclassAuthentication_html_aeb33404cd51828edf0db0cdce3c38b32"><div class="ttname"><a href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32">Authentication::authenticate</a></div><div class="ttdeci">bool authenticate()</div><div class="ttdoc">Authenticates the client with the server.</div><div class="ttdef"><b>Definition</b> Authentication.cpp:117</div></div>
-<div class="ttc" id="aclassLoading_html_a4381fcc49446bf5dbee9c3157c689676"><div class="ttname"><a href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">Loading::load</a></div><div class="ttdeci">bool load()</div><div class="ttdoc">Loads data required for the application.</div><div class="ttdef"><b>Definition</b> Loading.cpp:181</div></div>
-<div class="ttc" id="aclassPlaying_html_a77b5d5cc77492aefa350c6df293f33ee"><div class="ttname"><a href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">Playing::setup</a></div><div class="ttdeci">bool setup()</div><div class="ttdoc">Sets up the playing process.</div><div class="ttdef"><b>Definition</b> Playing.cpp:202</div></div>
+<p>This function initializes the system by establishing a WiFi connection, setting up interrupt for update button, and calling <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data.">handleAuthenticationAndLoading()</a> to handle authentication and loading processes. </p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>             {</div>
+<div class="line"><span class="lineno">  160</span>  Serial.begin(115200);</div>
+<div class="line"><span class="lineno">  161</span>  pinMode(<a class="code hl_define" href="#a1f639e12141251259a876ef492f55df6">led</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  162</span>  digitalWrite(<a class="code hl_define" href="#a1f639e12141251259a876ef492f55df6">led</a>, HIGH); <span class="comment">// HIGH is off for D1 mini</span></div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>  <span class="comment">// Set the digital pins as outputs</span></div>
+<div class="line"><span class="lineno">  165</span>  pinMode(<a class="code hl_variable" href="#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  166</span>  pinMode(<a class="code hl_variable" href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  167</span>  pinMode(<a class="code hl_variable" href="#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, OUTPUT);</div>
+<div class="line"><span class="lineno">  168</span>  pinMode(<a class="code hl_variable" href="#a4c9490822cc5d16cf060482ed1283fa6">btnUpdatePin</a>, INPUT_PULLUP);</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>  <span class="comment">// WiFi connection</span></div>
+<div class="line"><span class="lineno">  171</span>  WiFi.mode(WIFI_STA);</div>
+<div class="line"><span class="lineno">  172</span>  <a class="code hl_variable" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a>.addAP(WIFI_SSID, WIFI_PASSWORD);</div>
+<div class="line"><span class="lineno">  173</span>  Serial.println(<span class="stringliteral">&quot;Connecting to WiFi&quot;</span>);</div>
+<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a>.run() != WL_CONNECTED) {</div>
+<div class="line"><span class="lineno">  175</span>    Serial.print(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>    delay(500);</div>
+<div class="line"><span class="lineno">  177</span>  }</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>  Serial.println(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  180</span>  Serial.println(<span class="stringliteral">&quot;WiFi connected&quot;</span>);</div>
+<div class="line"><span class="lineno">  181</span>  Serial.println(<span class="stringliteral">&quot;IP address: &quot;</span>);</div>
+<div class="line"><span class="lineno">  182</span>  Serial.println(WiFi.localIP());</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>  <span class="comment">// Set up interrupt for update button</span></div>
+<div class="line"><span class="lineno">  185</span>  attachInterrupt(digitalPinToInterrupt(<a class="code hl_variable" href="#a4c9490822cc5d16cf060482ed1283fa6">btnUpdatePin</a>), <a class="code hl_function" href="#a1d57c55f1d937f833544c63673444c32">handleUpdateInterrupt</a>, FALLING);</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>  <span class="comment">// Handle authentication and loading</span></div>
+<div class="line"><span class="lineno">  188</span>  <a class="code hl_function" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading</a>();</div>
+<div class="line"><span class="lineno">  189</span>}</div>
+<div class="ttc" id="aMain_8cpp_html_a12e0822e230092cca844cd048a9d6cd6"><div class="ttname"><a href="#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a></div><div class="ttdeci">const int greenLEDPin</div><div class="ttdoc">Pin number for the green LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:60</div></div>
+<div class="ttc" id="aMain_8cpp_html_a17dc5624a7578d8675ef9fed1b260754"><div class="ttname"><a href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a></div><div class="ttdeci">ESP8266WiFiMulti WiFiMulti</div><div class="ttdoc">WiFi multi-client manager for ESP8266.</div><div class="ttdef"><b>Definition</b> Main.cpp:89</div></div>
+<div class="ttc" id="aMain_8cpp_html_a1d57c55f1d937f833544c63673444c32"><div class="ttname"><a href="#a1d57c55f1d937f833544c63673444c32">handleUpdateInterrupt</a></div><div class="ttdeci">void ICACHE_RAM_ATTR handleUpdateInterrupt()</div><div class="ttdoc">Interrupt service routine for handling update button press.</div><div class="ttdef"><b>Definition</b> Main.cpp:103</div></div>
+<div class="ttc" id="aMain_8cpp_html_a1f639e12141251259a876ef492f55df6"><div class="ttname"><a href="#a1f639e12141251259a876ef492f55df6">led</a></div><div class="ttdeci">#define led</div><div class="ttdoc">Pin number for the built-in LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:46</div></div>
+<div class="ttc" id="aMain_8cpp_html_a2a37a0731c2f8691dd9e3abf460fd1f9"><div class="ttname"><a href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a></div><div class="ttdeci">const int redLEDPin</div><div class="ttdoc">Pin number for the red LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:67</div></div>
+<div class="ttc" id="aMain_8cpp_html_a4c9490822cc5d16cf060482ed1283fa6"><div class="ttname"><a href="#a4c9490822cc5d16cf060482ed1283fa6">btnUpdatePin</a></div><div class="ttdeci">const int btnUpdatePin</div><div class="ttdoc">Pin number for the update Button.</div><div class="ttdef"><b>Definition</b> Main.cpp:75</div></div>
+<div class="ttc" id="aMain_8cpp_html_abd394e3bd0c2ba4048dea776c6557cd1"><div class="ttname"><a href="#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a></div><div class="ttdeci">const int blueLEDPin</div><div class="ttdoc">Pin number for the blue LED.</div><div class="ttdef"><b>Definition</b> Main.cpp:53</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32">Authentication::authenticate()</a>, <a class="el" href="#ad4297dc9f5dee3aca1982088ebab51e3">authentication</a>, <a class="el" href="#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, <a class="el" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d">Authentication::checkSavedToken()</a>, <a class="el" href="#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, <a class="el" href="#a1f639e12141251259a876ef492f55df6">led</a>, <a class="el" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676">Loading::load()</a>, <a class="el" href="#aa01bcf11e5df59192e7f3302b0242552">loading</a>, <a class="el" href="#a244868866c8dc3e5d6170358b29b7ddd">playing</a>, <a class="el" href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, <a class="el" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee">Playing::setup()</a>, and <a class="el" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a>.</p>
+<p class="reference">References <a class="el" href="#abd394e3bd0c2ba4048dea776c6557cd1">blueLEDPin</a>, <a class="el" href="#a4c9490822cc5d16cf060482ed1283fa6">btnUpdatePin</a>, <a class="el" href="#a12e0822e230092cca844cd048a9d6cd6">greenLEDPin</a>, <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>, <a class="el" href="#a1d57c55f1d937f833544c63673444c32">handleUpdateInterrupt()</a>, <a class="el" href="#a1f639e12141251259a876ef492f55df6">led</a>, <a class="el" href="#a2a37a0731c2f8691dd9e3abf460fd1f9">redLEDPin</a>, and <a class="el" href="#a17dc5624a7578d8675ef9fed1b260754">WiFiMulti</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="Main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.png" border="0" usemap="#aMain_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph" alt=""/></div>
 <map name="aMain_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph" id="aMain_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph">
-<area shape="rect" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,114,63,142"/>
-<area shape="rect" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="111,19,317,47"/>
-<area shape="poly" title=" " alt="" coords="46,112,73,85,109,60,131,50,133,55,112,65,77,90,50,116"/>
-<area shape="rect" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="113,75,315,119"/>
-<area shape="poly" title=" " alt="" coords="63,120,97,114,97,120,63,126"/>
-<area shape="rect" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="160,143,268,171"/>
-<area shape="poly" title=" " alt="" coords="63,130,145,143,144,148,63,135"/>
-<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="157,247,271,275"/>
-<area shape="poly" title=" " alt="" coords="56,140,183,236,180,240,53,144"/>
-<area shape="rect" href="classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="365,5,582,50"/>
-<area shape="poly" title=" " alt="" coords="317,28,349,28,349,33,318,34"/>
-<area shape="rect" href="classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="366,75,581,119"/>
-<area shape="poly" title=" " alt="" coords="315,94,350,94,350,100,315,100"/>
-<area shape="rect" href="classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="395,143,553,171"/>
-<area shape="poly" title=" " alt="" coords="268,154,379,154,379,160,268,160"/>
-<area shape="rect" href="classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="369,195,579,223"/>
-<area shape="poly" title=" " alt="" coords="269,165,387,189,386,194,268,170"/>
-<area shape="rect" href="classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="654,143,822,171"/>
-<area shape="poly" title=" " alt="" coords="553,154,638,154,638,160,553,160"/>
-<area shape="rect" href="classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="393,247,555,275"/>
-<area shape="poly" title=" " alt="" coords="271,258,377,258,377,264,271,264"/>
-<area shape="rect" href="classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="630,273,846,300"/>
-<area shape="poly" title=" " alt="" coords="271,270,365,284,494,290,615,289,615,294,494,295,365,289,271,275"/>
-<area shape="poly" title=" " alt="" coords="556,266,616,272,615,277,555,271"/>
+<area shape="rect" title="Sets up the system including WiFi connection, authentication, and loading and playing timeline data." alt="" coords="5,141,63,168"/>
+<area shape="rect" href="Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="111,114,347,142"/>
+<area shape="poly" title=" " alt="" coords="63,148,108,142,109,147,64,153"/>
+<area shape="rect" href="Main_8cpp.html#a1d57c55f1d937f833544c63673444c32" title="Interrupt service routine for handling update button press." alt="" coords="145,166,313,194"/>
+<area shape="poly" title=" " alt="" coords="64,155,130,164,129,169,63,161"/>
+<area shape="rect" href="classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="395,19,601,47"/>
+<area shape="poly" title=" " alt="" coords="263,111,394,60,428,49,429,54,396,65,265,116"/>
+<area shape="rect" href="classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="397,75,599,119"/>
+<area shape="poly" title=" " alt="" coords="347,112,381,108,382,113,348,117"/>
+<area shape="rect" href="classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="444,143,552,171"/>
+<area shape="poly" title=" " alt="" coords="348,138,429,147,428,152,347,143"/>
+<area shape="rect" href="classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="442,247,555,275"/>
+<area shape="poly" title=" " alt="" coords="313,140,348,152,404,188,469,235,465,240,401,192,346,157,312,145"/>
+<area shape="rect" href="classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="649,5,867,50"/>
+<area shape="poly" title=" " alt="" coords="602,28,634,28,634,33,602,34"/>
+<area shape="rect" href="classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="650,75,866,119"/>
+<area shape="poly" title=" " alt="" coords="600,94,635,94,635,100,600,100"/>
+<area shape="rect" href="classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="679,143,837,171"/>
+<area shape="poly" title=" " alt="" coords="553,154,663,154,663,160,553,160"/>
+<area shape="rect" href="classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="653,195,863,223"/>
+<area shape="poly" title=" " alt="" coords="553,165,671,189,670,194,552,170"/>
+<area shape="rect" href="classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="938,143,1107,171"/>
+<area shape="poly" title=" " alt="" coords="837,154,922,154,922,160,837,160"/>
+<area shape="rect" href="classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="677,247,839,275"/>
+<area shape="poly" title=" " alt="" coords="555,258,662,258,662,264,555,264"/>
+<area shape="rect" href="classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="915,273,1130,300"/>
+<area shape="poly" title=" " alt="" coords="556,270,650,284,778,290,899,289,899,294,778,295,649,289,555,275"/>
+<area shape="poly" title=" " alt="" coords="840,266,900,272,899,277,839,271"/>
 </map>
 </div>
 
@@ -385,7 +539,7 @@ Here is the call graph for this function:</div>
 <p>Instance of the <a class="el" href="classAuthentication.html">Authentication</a> class. </p>
 <p>This object is used for handling authentication operations. </p>
 
-<p class="reference">Referenced by <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>.</p>
 
 </div>
 </div>
@@ -405,6 +559,42 @@ Here is the call graph for this function:</div>
 <p>This constant represents the pin number for the blue LED. </p>
 
 <p class="reference">Referenced by <a class="el" href="classPlaying.html#af3071d1fb83767f99774fd50ff65cc40">Playing::changeColours()</a>, and <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a4c7db47645487553b13af007bc99d9de" name="a4c7db47645487553b13af007bc99d9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7db47645487553b13af007bc99d9de">&#9670;&#160;</a></span>btnStartPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int btnStartPin = D2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pin number for the start Button. </p>
+<p>This constant represents the pin number for the start Button. </p>
+
+</div>
+</div>
+<a id="a4c9490822cc5d16cf060482ed1283fa6" name="a4c9490822cc5d16cf060482ed1283fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9490822cc5d16cf060482ed1283fa6">&#9670;&#160;</a></span>btnUpdatePin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int btnUpdatePin = D1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pin number for the update Button. </p>
+<p>This constant represents the pin number for the update Button. Used for fetching content from the web. </p>
+
+<p class="reference">Referenced by <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
 
 </div>
 </div>
@@ -442,7 +632,7 @@ Here is the call graph for this function:</div>
 <p>Instance of the <a class="el" href="classLoading.html">Loading</a> class. </p>
 <p>This object is used for loading timeline data. </p>
 
-<p class="reference">Referenced by <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>.</p>
 
 </div>
 </div>
@@ -461,7 +651,7 @@ Here is the call graph for this function:</div>
 <p>Instance of the <a class="el" href="classPlaying.html">Playing</a> class. </p>
 <p>This object is used for playing timeline data. </p>
 
-<p class="reference">Referenced by <a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop()</a>, and <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a1e6b769b1c4d86e61c11997f3aa427d5">handleAuthenticationAndLoading()</a>, and <a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop()</a>.</p>
 
 </div>
 </div>
@@ -481,6 +671,25 @@ Here is the call graph for this function:</div>
 <p>This constant represents the pin number for the red LED. </p>
 
 <p class="reference">Referenced by <a class="el" href="classPlaying.html#af3071d1fb83767f99774fd50ff65cc40">Playing::changeColours()</a>, and <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup()</a>.</p>
+
+</div>
+</div>
+<a id="a379fa2cfe87e15952a63e9b81be9b5ab" name="a379fa2cfe87e15952a63e9b81be9b5ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379fa2cfe87e15952a63e9b81be9b5ab">&#9670;&#160;</a></span>updateRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool updateRequested = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag indicating whether an update is requested. </p>
+<p>This flag is set to true when an update is requested via the update button interrupt. </p>
+
+<p class="reference">Referenced by <a class="el" href="#a1d57c55f1d937f833544c63673444c32">handleUpdateInterrupt()</a>, and <a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop()</a>.</p>
 
 </div>
 </div>

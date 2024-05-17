@@ -1,9 +1,34 @@
 <map id="loop" name="loop">
-<area shape="rect" id="Node000001" title="Main loop of the program." alt="" coords="5,5,55,33"/>
-<area shape="rect" id="Node000002" href="$classPlaying.html#a2d198fdbcde6de06036ed4186001548f" title="Plays the timeline data." alt="" coords="103,5,208,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,17,87,17,87,22,55,22"/>
-<area shape="rect" id="Node000003" href="$classPlaying.html#a5e24c92b5e869946d98abd178eff3061" title="Uses the timeline data to change LED colors over time." alt="" coords="256,5,444,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,17,240,17,240,22,208,22"/>
-<area shape="rect" id="Node000004" href="$classPlaying.html#af3071d1fb83767f99774fd50ff65cc40" title="Changes the colors of the RGB LED based on the provided choice." alt="" coords="492,5,666,33"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="445,17,477,17,477,22,445,22"/>
+<area shape="rect" id="Node000001" title="Main loop of the program." alt="" coords="5,222,55,250"/>
+<area shape="rect" id="Node000002" href="$Main_8cpp.html#a1e6b769b1c4d86e61c11997f3aa427d5" title="Handles authentication and loading of timeline data." alt="" coords="103,170,339,198"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,227,152,200,153,205,56,232"/>
+<area shape="rect" id="Node000014" href="$classPlaying.html#a2d198fdbcde6de06036ed4186001548f" title="Plays the timeline data." alt="" coords="168,247,274,275"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="56,236,153,249,152,255,55,242"/>
+<area shape="rect" id="Node000003" href="$classAuthentication.html#aeb33404cd51828edf0db0cdce3c38b32" title="Authenticates the client with the server." alt="" coords="387,26,593,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="239,167,302,122,386,73,426,57,428,61,388,78,305,127,242,172"/>
+<area shape="rect" id="Node000005" href="$classAuthentication.html#a6e13c5fb0a17675cbe2bf781111cf54d" title="Checks for a saved JWT token and loads it if available." alt="" coords="389,88,591,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="274,167,390,135,391,140,276,172"/>
+<area shape="rect" id="Node000007" href="$classLoading.html#a4381fcc49446bf5dbee9c3157c689676" title="Loads data required for the application." alt="" coords="436,170,544,198"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="340,181,420,181,420,186,340,186"/>
+<area shape="rect" id="Node000011" href="$classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee" title="Sets up the playing process." alt="" coords="434,247,547,275"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="272,195,425,240,424,245,271,201"/>
+<area shape="rect" id="Node000004" href="$classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f" title="Saves a JWT token to a file on LittleFS." alt="" coords="641,5,859,50"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="594,32,626,31,626,36,594,38"/>
+<area shape="rect" id="Node000006" href="$classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86" title="Reads JWT token from a file stored on LittleFS." alt="" coords="642,75,858,119"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="592,102,627,101,627,106,592,108"/>
+<area shape="rect" id="Node000008" href="$classLoading.html#abddd24f8fa89d2c94d24b499485d425f" title="Retrieves the timeline data from the server based on the specified timeline number." alt="" coords="671,143,829,171"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="545,175,655,164,656,169,545,181"/>
+<area shape="rect" id="Node000010" href="$classLoading.html#a80e24e5cf50078c75593eff83eae55e2" title="Retrieves the current timeline number from the server." alt="" coords="645,195,855,223"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="545,186,630,195,629,200,545,192"/>
+<area shape="rect" id="Node000009" href="$classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606" title="Saves the timeline data to a file." alt="" coords="930,143,1099,171"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="829,154,914,154,914,160,829,160"/>
+<area shape="rect" id="Node000012" href="$classPlaying.html#aff641fcbb968459528336d2c3732b9bd" title="Loads the timeline data from the disk." alt="" coords="669,247,831,275"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="547,258,654,258,654,264,547,264"/>
+<area shape="rect" id="Node000013" href="$classPlaying.html#a4f81c9a5de20fa2242e31c1ee27df7a3" title="Processes the timeline data received from the server." alt="" coords="907,273,1122,300"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="548,270,642,284,770,290,891,289,891,294,770,295,641,289,547,275"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="832,266,892,272,891,277,831,271"/>
+<area shape="rect" id="Node000015" href="$classPlaying.html#a5e24c92b5e869946d98abd178eff3061" title="Uses the timeline data to change LED colors over time." alt="" coords="396,323,584,351"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="274,273,424,316,423,321,272,278"/>
+<area shape="rect" id="Node000016" href="$classPlaying.html#af3071d1fb83767f99774fd50ff65cc40" title="Changes the colors of the RGB LED based on the provided choice." alt="" coords="663,349,837,376"/>
+<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="585,344,648,350,648,355,584,349"/>
 </map>
