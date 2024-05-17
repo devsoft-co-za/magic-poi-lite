@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['saved_20timelines_20from_20magicpoi_20circusscientist_20com_20magic_20poi_20lite_20server_20api_20and_20displays_20specified_20colours_20according_20to_20precise_20timing_20em_0',['&lt;em&gt;Firmware for ESP8266 - fetches saved timelines from magicpoi.circusscientist.com (Magic Poi Lite server API) and displays specified colours according to precise timing.&lt;/em&gt;',['../index.html#autotoc_md1',1,'']]],
-  ['savejwttokentofile_1',['saveJWTTokenToFile',['../classAuthentication.html#a7a851cf9bcfc0010ecf0d10626312d6f',1,'Authentication']]],
-  ['savetimeline_2',['saveTimeline',['../classLoading.html#a48e8f0be6302e3b3eb36c2fd9a1a7606',1,'Loading']]],
-  ['server_20api_20and_20displays_20specified_20colours_20according_20to_20precise_20timing_20em_3',['&lt;em&gt;Firmware for ESP8266 - fetches saved timelines from magicpoi.circusscientist.com (Magic Poi Lite server API) and displays specified colours according to precise timing.&lt;/em&gt;',['../index.html#autotoc_md1',1,'']]],
-  ['setup_4',['setup',['../classPlaying.html#a77b5d5cc77492aefa350c6df293f33ee',1,'Playing::setup()'],['../Main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Main.cpp']]],
-  ['setup_3a_5',['Setup:',['../index.html#autotoc_md3',1,'']]],
-  ['signal_6',['signal',['../classPlaying.html#a4d9bbd6b2852129d6cf679603196d274',1,'Playing']]],
-  ['source_20code_7',['Magic Poi Lite Source Code',['../index.html',1,'']]],
-  ['specified_20colours_20according_20to_20precise_20timing_20em_8',['&lt;em&gt;Firmware for ESP8266 - fetches saved timelines from magicpoi.circusscientist.com (Magic Poi Lite server API) and displays specified colours according to precise timing.&lt;/em&gt;',['../index.html#autotoc_md1',1,'']]]
+  ['readjwttokenfromfile_0',['readJWTTokenFromFile',['../classAuthentication.html#ac67cb64472ed5e95794d07ce9f5e1b86',1,'Authentication']]],
+  ['redint_1',['redInt',['../classPlaying.html#af48ca7bb0f03c608845109a76e28ca9f',1,'Playing']]],
+  ['redledpin_2',['redLEDPin',['../Main_8cpp.html#a2a37a0731c2f8691dd9e3abf460fd1f9',1,'Main.cpp']]],
+  ['redval_3',['redVal',['../classPlaying.html#a07054319b1135b8aa10a9d234c93a617',1,'Playing']]],
+  ['requirements_3a_4',['Requirements:',['../index.html#autotoc_md2',1,'']]],
+  ['root_5',['root',['../classPlaying.html#a8b93e3901a9ec1f8e90ab4734060f02a',1,'Playing']]],
+  ['runnum_6',['runNum',['../classPlaying.html#a56193a48a68708478a6bec9ab93e789f',1,'Playing']]]
 ];

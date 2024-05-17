@@ -84,6 +84,7 @@ Requirements:</h2>
 <li>Software: PlatformIO</li>
 <li>Hardware: D1 mini</li>
 <li>Additional: common cathode RGB LED connected to D5 D6 and D7 *(optional - otherwise just look at the Serial Monitor to see colours)*</li>
+<li>Additional: two buttons attached to D1 and D2 *(optional - you can reset the D1 mini instead to fetch new Timeline)*</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Setup:</h2>
@@ -94,23 +95,30 @@ Setup:</h2>
 <li>upload to D1 mini and watch your LED's change colour</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md4"></a>
+Documentation:</h2>
+<ul>
+<li><a href="https://devsoft-co-za.github.io/magic-poi-lite/">https://devsoft-co-za.github.io/magic-poi-lite/</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Notes:</h2>
 <ul>
 <li>on the Magic Poi Lite page you can click on Sequence Mode to create a timeline with fixed interval (1 second between changes)</li>
 <li>the strobing colours are not implemented yet</li>
 <li>you may need to log in again periodically</li>
 <li>on startup the code fetches the currently selected timeline (buttons show up on the right of interface after save, click on button and press "Play Timeline" to use). Re-start the D1 mini to re-load after selecting a new timeline on the site.</li>
+<li>Press the button attached to D1 to check the server for updated timeline (re-fresh)</li>
 <li>timeline will loop back to start on finish *(this will be optional in a future version)*</li>
 <li><em>this is all experimental code subject to change without notice</em></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 TODO:</h2>
 <ul>
 <li>download all timelines at once and store, select which one to use with a button press</li>
-<li>update timelines (fetch from server) with another button press</li>
+<li>update timelines (fetch from server) with another button press <em>DONE</em></li>
 <li>play once only option (for shows where you don't want to repeat)</li>
 <li>add strobing colours to changeColours() function</li>
-<li>WiFi remote control hardware addon to sync multiple poi. </li>
+<li>WiFi remote control hardware addon to sync multiple poi.</li>
+<li>Add FastLED WS2812 and APA102 LED's support (on a different pin simultaneously or as an option in secrets.h) </li>
 </ul>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>

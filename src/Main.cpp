@@ -4,9 +4,8 @@
  * 
  * The main program - includes setup() and loop(). 
  * Currently set to connect to Magic Poi Lite API on startup and fetch the current timeline. 
- * Then display the timeline on RGB LED's according to timings. 
+ * Then display the timeline on RGB LEDs according to timings.
  */
-
 
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
@@ -68,39 +67,111 @@ const int greenLEDPin = D6;
 const int redLEDPin = D7;
 
 /**
+ * @brief Pin number for the update Button.
+ *
+ * This constant represents the pin number for the update Button.
+ * Used for fetching content from the web.
+ */
+const int btnUpdatePin = D1;
+
+/**
+ * @brief Pin number for the start Button.
+ *
+ * This constant represents the pin number for the start Button.
+ */
+const int btnStartPin = D2;
+
+/**
  * @brief WiFi multi-client manager for ESP8266.
  *
  * This object is used for managing multiple WiFi connections on ESP8266.
  */
 ESP8266WiFiMulti WiFiMulti;
 
+/**
+ * @brief Flag indicating whether an update is requested.
+ *
+ * This flag is set to true when an update is requested via the update button interrupt.
+ */
+volatile bool updateRequested = false;
 
+/**
+ * @brief Interrupt service routine for handling update button press.
+ *
+ * This function sets the updateRequested flag to true when the update button is pressed.
+ */
+void ICACHE_RAM_ATTR handleUpdateInterrupt() {
+  updateRequested = true;
+}
+
+/**
+ * @brief Handles authentication and loading of timeline data.
+ * 
+ * This function performs the process of checking for saved authentication tokens,
+ * handling authentication, and loading timeline data. It prints messages to indicate
+ * the status of these operations.
+ */
+void handleAuthenticationAndLoading() {
+  Serial.println("Setup: Connection & Authentication");
+  
+  bool isAuthenticated = authentication.checkSavedToken();
+  isAuthenticated = false; // test re-auth - todo: tie this to a button press - todo: not working without this?
+
+  if (isAuthenticated) {
+    Serial.println("Authentication found. Using saved.");
+    if (loading.load()) {
+      Serial.println("LOADED AND SAVED TIMELINE SUCCESSFULLY");
+      if (playing.setup()) {
+        Serial.println("SETUP COMPLETE");
+      }
+    } else {
+      Serial.println("LOADING AND SAVING TIMELINE UNSUCCESSFUL");
+    }
+  } else {
+    bool isAuthenticating = authentication.authenticate();
+    if (isAuthenticating) {
+      isAuthenticated = authentication.checkSavedToken();
+      if (isAuthenticated) {
+        Serial.println("Authenticated using login success. Should be saved now, using..");
+        if (loading.load()) {
+          Serial.println("LOADED AND SAVED TIMELINE SUCCESSFULLY");
+          if (playing.setup()) {
+            Serial.println("SETUP COMPLETE");
+          }
+        } else {
+          Serial.println("LOADING AND SAVING TIMELINE UNSUCCESSFUL");
+        }
+      } else {
+        Serial.println("Auth check saved JWT after password login failed");
+      }
+    } else {
+      Serial.println("Failed to authenticate with password");
+    }
+  }
+}
 
 /**
  * @brief Sets up the system including WiFi connection, authentication, and loading and playing timeline data.
  * 
- * This function initializes the system by establishing a WiFi connection, checking for saved authentication tokens,
- * and handling authentication processes. It loads timeline data from the disk and sets up the playing process
- * accordingly. If authentication is successful and timeline data is loaded successfully, it completes the setup
- * process and prints a success message. Otherwise, it prints error messages indicating the failure.
+ * This function initializes the system by establishing a WiFi connection, setting up interrupt for update button,
+ * and calling handleAuthenticationAndLoading() to handle authentication and loading processes.
  */
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   pinMode(led, OUTPUT);
   digitalWrite(led, HIGH); // HIGH is off for D1 mini
 
-  // set the digital pins as outputs
+  // Set the digital pins as outputs
   pinMode(greenLEDPin, OUTPUT);
   pinMode(redLEDPin, OUTPUT);
   pinMode(blueLEDPin, OUTPUT);
+  pinMode(btnUpdatePin, INPUT_PULLUP);
 
-  // WiFi connection: 
+  // WiFi connection
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP(WIFI_SSID, WIFI_PASSWORD);
   Serial.println("Connecting to WiFi");
-  while (WiFiMulti.run() != WL_CONNECTED)
-  {
+  while (WiFiMulti.run() != WL_CONNECTED) {
     Serial.print(".");
     delay(500);
   }
@@ -110,63 +181,28 @@ void setup()
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 
-  // Setup: Connection & Authentication
-  Serial.println("Setup: Connection & Authentication");
+  // Set up interrupt for update button
+  attachInterrupt(digitalPinToInterrupt(btnUpdatePin), handleUpdateInterrupt, FALLING);
 
-  // Connecting to WiFi and authenticating
-  bool isAuthenticated = authentication.checkSavedToken();
-  isAuthenticated = false; //test re-auth - todo: tie this to a button press - todo: not working without this? loading timeline from disk error? 
-  //Check disk for saved JWT auth and use it:
-  if (isAuthenticated)
-  {
-    Serial.println("Authentication found. Using saved.");
-    // Loading data
-    if(loading.load()){
-          Serial.println("LOADED AND SAVED TIMELINE SUCCESSFULLY");
-          if(playing.setup()){
-            Serial.println("SETUP COMPLETE");
-          }
-        } else{
-          Serial.println("LOADING AND SAVING TIMELINE UNSUCCESSFUL");
-        } //todo: loading needs to tell us if authentication is unsuccessful, so we can try password auth?
-  }
-  else //no saved JWT found: 
-  {
-    bool isAuthenticating = authentication.authenticate();
-    if(isAuthenticating){ //auth success
-      isAuthenticated = authentication.checkSavedToken(); //check again for testing, just for testing?
-      if(isAuthenticated){ 
-        Serial.println("Authenticated using login success. Should be saved now, using..");
-        if(loading.load()){
-          Serial.println("LOADED AND SAVED TIMELINE SUCCESSFULLY");
-          if(playing.setup()){
-            Serial.println("SETUP COMPLETE");
-          }
-        } else{
-          Serial.println("LOADING AND SAVING TIMELINE UNSUCCESSFUL");
-        }
-      } else
-      {
-        Serial.println("Auth check saved JWT after password login failed");
-      }
-    } else
-    {
-      Serial.println("Failed to authenticate with password");
-    }
-  }
+  // Handle authentication and loading
+  handleAuthenticationAndLoading();
 }
 
 /**
  * @brief Main loop of the program.
  * 
- * This function is the main loop of the program. It repeatedly calls the play function to execute the playing process,
- * which involves changing LED colors over time according to the timeline data. Additionally, it adds a delay of 5 seconds
- * between each play iteration to control the timing of the LED color changes.
+ * This function is the main loop of the program. It checks for update requests and calls
+ * handleAuthenticationAndLoading() if an update is requested. It also calls the play function
+ * to execute the playing process, which involves changing LED colors over time according to
+ * the timeline data. Additionally, it adds a delay of 5 seconds between each play iteration
+ * to control the timing of the LED color changes.
  */
-void loop()
-{
-  // Playing
+void loop() {
+  if (updateRequested) {
+    updateRequested = false;
+    handleAuthenticationAndLoading();
+  }
+
   playing.play();
-  // Add delay if needed
   delay(5000); // Example: Delay for 5 seconds between each play
 }
